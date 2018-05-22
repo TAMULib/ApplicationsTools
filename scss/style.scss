@@ -352,6 +352,9 @@ span.expand-colapse{
     right: -40px;  width: 40px;
   }
   .menu label.menu-toggle span.icon { padding: 14px; }
+
+  span.expand-colapse{ left: 150px; }
+  .card-title span.has-note::before { margin-left: 275px; }
 }
 
 @media (max-width: 1440px){
@@ -375,4 +378,17 @@ span.expand-colapse{
   #trash.show img {  width: 25px; padding: 10px 0px 25px 0px; }
 
   .description {min-height: 100px;}
+
+  span.expand-colapse{
+    top: -28px;
+    left: 118px;
+    padding: 4px;
+    font-size: 0.65em;
+  }
+
+  .card-title span.has-note::before {
+    font-size: 0.45em;
+    margin-top: -7px;
+    margin-left: 220px;
+  }
 }
