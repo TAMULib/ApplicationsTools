@@ -131,13 +131,18 @@ $('.card p').on('blur',function(){
     var theId = currentId.substring(5);
     if (note!=$(this).html()){
         var note = $(this).html();
+            if(note !== ''){
+                $(this).parent().parent().children('.card-title').children('span').addClass('has-note');
+            } else {
+                $(this).parent().parent().children('.card-title').children('span').removeClass('has-note');
+            }
 
         $.ajax({
             type: "POST", 
             url: "app.php",
             data: {method:"note", id:theId, message:note},
             success:function(data){
- 
+            
             }
         });
     }; 
@@ -195,3 +200,12 @@ $('.card-title').on('dblclick',function() {
     var $this = $(this).parent().find('.description');
     $this.toggle();
 });
+
+$('span.expand-colapse').on('click', function(){
+    console.log('CLICK');
+    $(this).text(function(i, text){
+          return text === "Expand All" ? "Collapse All" : "Expand All";
+      });
+    var $this = $(this).parent().children('.column-content').find('.description');
+    $this.toggle();
+})

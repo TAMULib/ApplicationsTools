@@ -23,7 +23,7 @@ include 'config.php';
                     <div class="card" data-column="'.$card['location'].'" id="card-'.$card['id'].'">
                             <div class="card-title">
                                 <h3 contenteditable="true">'.$card['title'].'</h3>
-                                <span>
+                                <span class="'.($card['note'] != '' || NULL ? 'has-note' : '').'">
                                     <img src="images/gear.png" alt="options" class="gear"/>
                                     <div class="options">
                                         <select>'.$settingsOptions.'</select>

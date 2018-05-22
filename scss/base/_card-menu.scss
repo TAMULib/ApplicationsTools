@@ -1,0 +1,48 @@
+/* MENU */
+
+.menu {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  bottom:0;
+  background: #ddd;
+  width: 240px;
+  height: 100%;
+  transform: translate3d(-240px, 0, 0);
+  transition: transform 0.35s;
+
+    .column-content {
+        min-height: 25px;
+        background: #ddd;
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+
+}
+.menu label.menu-toggle {
+  position: absolute;
+  right: -60px;
+  width: 60px;
+  height: 100%;
+  display: block;
+  background: #ededed;
+  
+  span.icon {
+    display: block;
+    padding: 22px;
+    margin-bottom: -11px;
+  }
+}
+
+/* hide inputs */
+.menu-checkbox {
+  display: none;
+}
+
+/* fade in checked menu */
+.menu-checkbox:checked + .menu {
+  transform: translate3d(0, 0, 0);
+  width:300px;
+}
+
+/* END MENU */

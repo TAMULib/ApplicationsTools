@@ -5,32 +5,21 @@ html {
   box-sizing: border-box;
   font-size: 16px; }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit; }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
+body, h1, h2, h3, h4,
+h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
   font-family: "Lato", sans-serif; }
 
-ol,
-ul {
+ol, ul {
   list-style: none; }
 
 body {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2283/denim.png); }
+  background: url(../images/denim.png); }
 
 /* Header */
 .global-header {
@@ -61,7 +50,6 @@ body {
   bottom: 0;
   background: #ddd;
   width: 240px;
-  height: 100%;
   transform: translate3d(-240px, 0, 0);
   transition: transform 0.35s; }
   .menu .column-content {
@@ -109,7 +97,21 @@ body {
 #static .description {
   min-height: 95px; }
 
-.sub-column {
+span.expand-colapse {
+  display: block;
+  border-radius: 3px;
+  width: 76px;
+  top: -38px;
+  position: relative;
+  left: 250px;
+  margin: auto;
+  background: ghostwhite;
+  padding: 4px;
+  font-size: 0.75em;
+  cursor: pointer;
+  text-align: center; }
+
+.sub-columns {
   padding: 5px;
   margin: 10px 0;
   background: #f5f5f5;
@@ -127,9 +129,7 @@ body {
   margin-bottom: 20px;
   padding: 5px; }
 
-#pending .description,
-#at-large .description,
-#ongoing .description {
+#app .description {
   display: none; }
 
 .card {
@@ -180,9 +180,23 @@ body {
       position: absolute;
       display: inline-block; }
 
+.card-title span.has-note::before {
+  content: 'notes added';
+  position: absolute;
+  background: rebeccapurple;
+  border-radius: 3px 0px 0 0;
+  color: ghostwhite;
+  display: block;
+  padding: 0px;
+  font-size: 0.65em;
+  margin-top: -6px;
+  margin-left: 476px;
+  width: 80px;
+  text-align: center; }
+
 .card-title span img.gear {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   float: right;
   transition: transform 5s ease;
   cursor: pointer; }
