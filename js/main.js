@@ -108,12 +108,13 @@ drake.on('drop', function(el) {
 
 
 
-$('.card h3').on('blur',function(){
-    var title = $('.card h3').html();
-    var currentId = $(this).parent().parent().attr('id');
+$('.card-title h3').on('blur',function(){
+    var title = $('.card-title h3').html();
+    var currentId = $(this).parent().parent().parent().attr('id');
     var theId = currentId.substring(5);
     if (title!=$(this).html()){
         var title = $(this).html();
+        console.log(title);
         $.ajax({
             type: "POST", 
             url: "app.php",
@@ -125,60 +126,66 @@ $('.card h3').on('blur',function(){
     }; 
 });
 
-$('.card p').on('blur',function(){
-    var note = $('.card p').html();
+$('.card-body p').on('blur',function(){
+    var note = $('.card-body p').html();
     var currentId = $(this).parent().parent().attr('id');
     var theId = currentId.substring(5);
-    if (note!=$(this).html()){
+    
+
+
+    
+
         var note = $(this).html();
-            if(note !== ''){
-                $(this).parent().parent().children('.card-title').children('span').addClass('has-note');
-            } else {
-                $(this).parent().parent().children('.card-title').children('span').removeClass('has-note');
-            }
+        console.log( $(this).parent().parent().find('.card-information span.notes-icon').html() );
+        
+        if(note !=''){
+            $(this).parent().parent().find('.card-information span.notes-icon').removeClass('hide');
+        } else{
+            $(this).parent().parent().find('.card-information span.notes-icon').addClass('hide');
+        }
+
 
         $.ajax({
-            type: "POST", 
-            url: "app.php",
-            data: {method:"note", id:theId, message:note},
-            success:function(data){
-            
-            }
-        });
-    }; 
+        type: "POST", 
+        url: "app.php",
+        data: {method:"note", id:theId, message:note},
+        success:function(data){
+
+        }
+    });
 });
 
 
 
     
-$('select option:selected' ).each(function() {
+$('input:checked' ).each(function() {
     if($(this).val() == 2){
-        $(this).closest('.card-title').addClass('customer');
+        $(this).closest('.card-header').addClass('customer');
     };
     if($(this).val() == 3){
-        $(this).closest('.card-title').addClass('di');
+        $(this).closest('.card-header').addClass('di');
     };
 });
 
 
-$('select').change(function() {
+$('input').change(function() {
     var currentId = $(this).parent().parent().parent().parent().attr('id');
     var theId = currentId.substring(5);
     var statusOption = $(this).val();
 
     if($(this).val() == 1){
-        $(this).closest('.card-title').removeClass('di customer');
-        $(this).closest('.card-title').removeClass('customer');
+        $(this).closest('.card-header').removeClass('di customer');
+        $(this).closest('.card-header').removeClass('customer');
     };
 
     if($(this).val() == 2){
-        $(this).closest('.card-title').addClass('customer');
-        $(this).closest('.card-title').removeClass('di');
+        $(this).closest('.card-header').addClass('customer');
+        $(this).closest('.card-header').removeClass('di');
     };
 
     if($(this).val() == 3){
-        $(this).closest('.card-title').addClass('di');
-        $(this).closest('.card-title').removeClass('customer');
+        $(this).closest('.card-header').addClass('di');
+        $(this).closest('.card-header').removeClass('customer');
     };
  
     $.ajax({
@@ -191,21 +198,20 @@ $('select').change(function() {
     });
 });
 
-$('.gear').on('click',function() {
+$('.card-options').on('click',function() {
     var $this = $(this).parent().find('.options');
     $this.toggle();
 });
 
-$('.card-title').on('dblclick',function() {
-    var $this = $(this).parent().find('.description');
+$('.card-header').on('dblclick',function() {
+    var $this = $(this).parent().find('.card-body');
     $this.toggle();
 });
 
 $('span.expand-colapse').on('click', function(){
-    console.log('CLICK');
     $(this).text(function(i, text){
           return text === "Expand All" ? "Collapse All" : "Expand All";
       });
-    var $this = $(this).parent().children('.column-content').find('.description');
+    var $this = $(this).parent().parent().children('.column-content').find('.card-body');
     $this.toggle();
 })

@@ -16,25 +16,31 @@ include 'config.php';
                     
                         $settingsOptions ='';
                         foreach($optionResults as $setting) {
-                            $settingsOptions .= '<option value="'.$setting['id'].'" '.($card['status'] == $setting['id'] ? 'selected' : '').'>'.$setting['status'].'</option>';
+                            $settingsOptions .= '
+                            <li>
+                                <input type="radio" id="'.$setting['status'].'" name="'.$setting['status'].'" value="'.$setting['id'].'" checked="'.($card['status'] == $setting['id'] ? 'checked' : 'false').'">
+                                <label for="'.$setting['status'].'">'.$setting['status'].'</label>
+                            </li>';
                         };
 
                     $cardTemplate .= '
                     <div class="card" data-column="'.$card['location'].'" id="card-'.$card['id'].'">
+                        <div class="card-header">
                             <div class="card-title">
                                 <h3 contenteditable="true">'.$card['title'].'</h3>
-                                <span class="'.($card['note'] != '' || NULL ? 'has-note' : '').'">
-                                    <img src="images/gear.png" alt="options" class="gear"/>
-                                    <div class="options">
-                                        <select>'.$settingsOptions.'</select>
-                                    </div>
-                                </span>
                             </div>
-                            <div class="description">
-                                <p contenteditable="true">'.$card['note'].'</p>
+                            <div class="card-information">
+                                <span class="notes-icon '.($card['note'] != '' || NULL ? '' : 'hide').'"><img src="images/note.png" alt="has note" title="Card has a note" /></span>
+                                <span class="card-options"><img src="images/gear.png" /></span>
+                                    <ul class="options">
+                                    '.$settingsOptions.'
+                                    </ul>            
                             </div>
                         </div>
-                    ';
+                        <div class="card-body">
+                            <p contenteditable="true">'.$card['note'].'</p>
+                        </div>
+                    </div>';
                     }
                 }
             echo $cardTemplate;

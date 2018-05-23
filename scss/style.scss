@@ -102,20 +102,7 @@ body {
 
 
 
-span.expand-colapse{
-    display: block;
-    border-radius: 3px;
-    width: 76px;
-    top: -38px;
-    position: relative;
-    left: 250px;
-    margin: auto;
-    background: ghostwhite;
-    padding: 4px;
-    font-size: 0.75em;
-    cursor: pointer;
-    text-align: center;
-}
+
 
 .sub-columns {
   padding: 5px;
@@ -124,11 +111,31 @@ span.expand-colapse{
   display: flex;
   flex-direction: column;
 }
-.column-title {
+
+
+
+
+.column-header {
   border-bottom: 1px solid #b8b8b8;
   background: #ffc222;
   padding:10px;
+  display: flex;
+  justify-content:space-between;
 }
+
+
+.expand-colapse{
+    display: block;
+    border-radius: 3px;
+    width: 76px;
+    background: ghostwhite;
+    padding: 4px;
+    font-size: 0.75em;
+    cursor: pointer;
+    padding-top: 7px;
+    text-align: center;
+}
+
 
 
 .column-content {
@@ -140,12 +147,102 @@ span.expand-colapse{
 
 #app .description{ display:none;}
 
-.card {
-  margin: 5px;
+.card {  margin: 5px; }
+
+.card-header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1d1c1d;
+  background: #f5f5f5;
+  border-bottom: 1px solid #1d1c1d;
+  cursor: move;
+  padding: 10px;
+  
+  &.di {
+    background: #FAF394;
+  }
+
+  &.customer {
+    background: #CEF6FE;
+  }
 }
 
-.card p {
+.card-title{
   padding: 5px;
+  display: inline-block;
+  max-width: 275px;
+  align-self: flex-start;
+  
+  h3 {
+      font-size: 1.1em;
+      padding:2px;
+      overflow: hidden;
+      cursor: pointer;
+     
+      &:hover, &:focus {
+        outline-color: #ccc;
+
+        &:after {
+          content: '';
+          background : url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/2283/pen-small.png') no-repeat 8px 0;
+          width:25px;
+          height: 24px;
+          position: absolute;
+          display: inline-block;
+        }
+      }
+    }
+}
+
+.card-information{
+  display:flex;
+  align-items: center;
+  .notes-icon { padding-right:5px; }
+  .hide { visibility:hidden; }
+  img{ width: 15px;   align-self: flex-end;
+  }
+}
+
+.options{
+    background: ghostwhite;
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    z-index: 1170;
+    margin-top: 80px;
+    margin-left: -150px;
+  
+  li{
+    border-bottom:1px solid #ddd;
+    padding:10px;
+
+    input[type="radio"] { 
+      -webkit-appearance: checkbox;
+      -moz-appearance: checkbox;
+      -ms-appearance: checkbox;
+      border: none;
+      background:red;
+    }
+    label {
+      display:inline-block;
+    }
+    
+    &:last-child{
+      border-bottom:none;;
+    }
+  }
+
+}
+
+
+
+.card-body{
+    padding: 10px;
+    background: #fff;
+    min-height:150px;
+    display:none;
+  p {
   max-width:550px;
   &:hover, &:focus {
       outline-color: #ccc;
@@ -158,111 +255,8 @@ span.expand-colapse{
         position: absolute;
         display: inline-block;
       }
+    }
   }
-}
-.card-title {
-  color: #1d1c1d;
-  height: 50px;
-  justify-content: space-between;
-  background: #f5f5f5;
-  padding: 10px;
-  border-bottom: 1px solid #1d1c1d;
-  cursor: move;
-
-  &.di {
-    background: #FAF394;
-  }
-
-  &.customer {
-    background: #CEF6FE;
-  }
-}
-
-.card-title h3 {
-  font-size: 1.2em;
-  padding: 5px;
-  display: inline-block;
-  max-width: 275px;
-  height:30px;
-  overflow: hidden;
-  &:hover, &:focus {
-      outline-color: #ccc;
-      cursor: pointer;
-      &:after {
-        content: '';
-        background : url(../images/pen-small.png) no-repeat 8px 0;
-        width:25px;
-        height: 24px;
-    position: absolute;
-    display: inline-block;
-      }
-  }
-}
-
-.card-title span {
-  &.has-note::before {
-    content: 'notes added';
-    position: absolute;
-    background: rebeccapurple;
-    border-radius: 3px 0px 0 0;
-    color: ghostwhite;
-    display: block;
-    padding: 0px;
-    font-size: 0.65em;
-    margin-top: -6px;
-    margin-left: 476px;
-    width: 80px;
-    text-align: center;
-  }
-  img.gear{
-    width:20px;
-    height:20px;
-    float:right;
-    transition: transform 5s ease;
-    cursor: pointer;
-  }
-
-  .options {
-    display: none;
-    position: relative;
-    width: 155px;
-    background: rgba(#1b1b1b,0.75);
-    border: 1px solid #4d4d4d;
-    height: 55px;
-    padding: 10px;
-    left: 396px;
-    top: 6px;
-    z-index: 10000;
-  }
-
-
-
-
-
-
-
-  select {
-    height: 30px;
-    border: 0;
-    /* outline: 1px solid #CCC; */
-    background-color: white;
-  }
-}
-
-
-
-
-
-.description {
-  padding: 10px;
-  overflow: hidden;
-  min-height: 130px;
-  background: #fff;
-}
-.description h2 {
-  font-size: 1.25em;
-  font-weight: 700;
-  padding-bottom: 10px;
 }
 
 
@@ -340,55 +334,28 @@ span.expand-colapse{
 
 
 
-@media (max-width: 1680px){
-  .wrapper{
-    width: 96.85vw;
-    margin: 0 0px 0 auto;
-  }
+// @media (max-width: 1680px){
+//   .wrapper{
+//     width: 96.85vw;
+//     margin: 0 0px 0 auto;
+//   }
 
-  .card-title span { .options { left:195px; } }
+//   .card-title span { .options { left:195px; } }
 
-  .menu label.menu-toggle {
-    right: -40px;  width: 40px;
-  }
-  .menu label.menu-toggle span.icon { padding: 14px; }
+//   .menu label.menu-toggle {
+//     right: -40px;  width: 40px;
+//   }
+//   .menu label.menu-toggle span.icon { padding: 14px; }
 
-  span.expand-colapse{ left: 150px; }
-  .card-title span.has-note::before { margin-left: 275px; }
-}
+//   span.expand-colapse{ left: 150px; }
+//   .card-title span.has-note::before { margin-left: 275px; }
+// }
 
-@media (max-width: 1440px){
-  .wrapper{
-    width: 95vw;
-    margin: 0 8px 0 auto;
-  }
-
+@media screen and (max-width: 1680px) and (min-width: 1440px){
+  .wrapper{ width: 95vw;  margin: 0 8px 0 auto; }
   .column-title { padding: 4px; font-size:1.2em;}
-  .card-title {
-    height: 35px;
-    padding: 0px;
-  }
   .card-title h3 { font-size: 1em;}
-  .card-title span img.gear {
-    width: 15px; height: 15px;
-    float: right; top: 10px;
-    position: relative; right:10px;
-  }
   #trash.show { height: 50px; }
   #trash.show img {  width: 25px; padding: 10px 0px 25px 0px; }
-
-  .description {min-height: 100px;}
-
-  span.expand-colapse{
-    top: -28px;
-    left: 118px;
-    padding: 4px;
-    font-size: 0.65em;
-  }
-
-  .card-title span.has-note::before {
-    font-size: 0.45em;
-    margin-top: -7px;
-    margin-left: 220px;
-  }
+  span.expand-colapse{ font-size: 0.65em; }
 }

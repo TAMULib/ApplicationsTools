@@ -24,21 +24,25 @@ include 'app.php';
       <div id="static" class="container column-content">
         
           <div class="card">
-              <div class="card-title">
-                  <h3></h3>
-              </div>
+            <div class="card-header">
+                <div class="card-title">
+                    <h3> </h3>
+                </div>
+            </div>
           </div>
-
           <div class="card">
-              <div class="card-title">
-                  <h3>DSpace</h3>
-              </div>
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>DSpace</h3>
+                </div>
+            </div>
           </div>
-
           <div class="card">
-              <div class="card-title">
-                  <h3>DAME</h3>
-              </div>
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>DAME</h3>
+                </div>
+            </div>
           </div>
       </div>
     </div>
@@ -51,45 +55,54 @@ include 'app.php';
   <div class="columns">
     <div class="sub-columns">
         <div class="column">
-          <h2 class="column-title">Pending</h2>
-          <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">Pending</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
+          
             <div id="pending" class="container column-content">
               <?php $getCards->theCards('1');  ?>
           </div>
         </div>
 
         <div class="column">
-          <h2 class="column-title">Stuff @ Large</h2>
-          <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">Stuff @ Large</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
             <div id="at-large" class="container column-content">
               <?php $getCards->theCards('2');  ?>
           </div>
         </div>
 
         <div class="column">
-          <h2 class="column-title">Ongoing</h2>
-          <span class="expand-colapse">Expand All</span>
+           <div class="column-header">
+            <h2 class="column-title">Ongoing</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
             <div id="ongoing" class="container column-content">
               <?php $getCards->theCards('3');  ?>
             </div>
         </div>
-
-
     </div>
   </div>
 
   <div class="columns">
     <div class="sub-columns">
         <div class="column">
-          <h2 class="column-title">On Deck</h2>
-          <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">On Deck</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
             <div id="on-deck" class="column-content">
                 <?php $getCards->theCards('4');  ?>
             </div>
         </div>
         <div class="column">
-          <h2 class="column-title">Current</h2>
-          <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">Current</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
             <div id="current" class="column-content">
               <?php $getCards->theCards('5');  ?>
             </div>
@@ -101,16 +114,21 @@ include 'app.php';
   <div class="columns">
     <div class="sub-columns">
       <div class="column">
-        <h2 class="column-title">Moving To Pre</h2>
-        <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">Moving To Pre</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
           <div id="moving-pre" class="column-content">
             <?php $getCards->theCards('6');  ?>
           </div>
       </div>
 
       <div class="column">
-        <h2 class="column-title">On Pre</h2>
-        <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">On Pre</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
+
           <div id="on-pre" class="column-content">
             <?php $getCards->theCards('7');  ?>
           </div>
@@ -122,16 +140,20 @@ include 'app.php';
   <div class="columns">
     <div class="sub-columns">
       <div class="column">
-        <h2 class="column-title">Moving To Production</h2>
-        <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">Moving To Production</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
         <div id="moving-prod" class="column-content">
           <?php $getCards->theCards('8');  ?>
         </div>
       </div>
 
       <div class="column">
-        <h2 class="column-title">On Production</h2>
-        <span class="expand-colapse">Expand All</span>
+          <div class="column-header">
+            <h2 class="column-title">On Production</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
         <div id="on-prod" class="column-content">
           <?php $getCards->theCards('9');  ?>
         </div>
