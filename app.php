@@ -17,10 +17,8 @@ include 'config.php';
                         $settingsOptions ='';
                         foreach($optionResults as $setting) {
                             $settingsOptions .= '
-                            <li>
-                                <input type="radio" id="'.$setting['status'].'" name="'.$setting['status'].'" value="'.$setting['id'].'" checked="'.($card['status'] == $setting['id'] ? 'checked' : 'false').'">
-                                <label for="'.$setting['status'].'">'.$setting['status'].'</label>
-                            </li>';
+                            <option value="'.$setting['id'].'" '.($card['status'] == $setting['id'] ? 'selected' : '').'>'.$setting['status'].'</option>
+                            ';
                         };
 
                     $cardTemplate .= '
@@ -32,9 +30,9 @@ include 'config.php';
                             <div class="card-information">
                                 <span class="notes-icon '.($card['note'] != '' || NULL ? '' : 'hide').'"><img src="images/note.png" alt="has note" title="Card has a note" /></span>
                                 <span class="card-options"><img src="images/gear.png" /></span>
-                                    <ul class="options">
-                                    '.$settingsOptions.'
-                                    </ul>            
+                                <div class="options">
+                                    <select>'.$settingsOptions.'</select>
+                                </div> 
                             </div>
                         </div>
                         <div class="card-body">

@@ -197,6 +197,7 @@ body {
 
 .card-information{
   display:flex;
+  position: relative;
   align-items: center;
   .notes-icon { padding-right:5px; }
   .hide { visibility:hidden; }
@@ -208,30 +209,12 @@ body {
     background: ghostwhite;
     border: 1px solid #ccc;
     display: none;
-    position: absolute;
-    z-index: 1170;
-    margin-top: 80px;
-    margin-left: -150px;
+  select{
+        position: absolute;
+        z-index: 1170;
+         -webkit-appearance: menulist-button;
+     }
   
-  li{
-    border-bottom:1px solid #ddd;
-    padding:10px;
-
-    input[type="radio"] { 
-      -webkit-appearance: checkbox;
-      -moz-appearance: checkbox;
-      -ms-appearance: checkbox;
-      border: none;
-      background:red;
-    }
-    label {
-      display:inline-block;
-    }
-    
-    &:last-child{
-      border-bottom:none;;
-    }
-  }
 
 }
 
@@ -333,23 +316,6 @@ body {
 
 
 
-
-// @media (max-width: 1680px){
-//   .wrapper{
-//     width: 96.85vw;
-//     margin: 0 0px 0 auto;
-//   }
-
-//   .card-title span { .options { left:195px; } }
-
-//   .menu label.menu-toggle {
-//     right: -40px;  width: 40px;
-//   }
-//   .menu label.menu-toggle span.icon { padding: 14px; }
-
-//   span.expand-colapse{ left: 150px; }
-//   .card-title span.has-note::before { margin-left: 275px; }
-// }
 
 @media screen and (max-width: 1680px) and (min-width: 1440px){
   .wrapper{ width: 95vw;  margin: 0 8px 0 auto; }

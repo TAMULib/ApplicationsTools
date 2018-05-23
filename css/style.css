@@ -170,6 +170,7 @@ body {
 
 .card-information {
   display: flex;
+  position: relative;
   align-items: center; }
   .card-information .notes-icon {
     padding-right: 5px; }
@@ -182,24 +183,11 @@ body {
 .options {
   background: ghostwhite;
   border: 1px solid #ccc;
-  display: none;
-  position: absolute;
-  z-index: 1170;
-  margin-top: 80px;
-  margin-left: -150px; }
-  .options li {
-    border-bottom: 1px solid #ddd;
-    padding: 10px; }
-    .options li input[type="radio"] {
-      -webkit-appearance: checkbox;
-      -moz-appearance: checkbox;
-      -ms-appearance: checkbox;
-      border: none;
-      background: red; }
-    .options li label {
-      display: inline-block; }
-    .options li:last-child {
-      border-bottom: none; }
+  display: none; }
+  .options select {
+    position: absolute;
+    z-index: 1170;
+    -webkit-appearance: menulist-button; }
 
 .card-body {
   padding: 10px;

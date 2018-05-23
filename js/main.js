@@ -158,7 +158,7 @@ $('.card-body p').on('blur',function(){
 
 
     
-$('input:checked' ).each(function() {
+$('select option:selected' ).each(function() {
     if($(this).val() == 2){
         $(this).closest('.card-header').addClass('customer');
     };
@@ -168,7 +168,7 @@ $('input:checked' ).each(function() {
 });
 
 
-$('input').change(function() {
+$('select').change(function() {
     var currentId = $(this).parent().parent().parent().parent().attr('id');
     var theId = currentId.substring(5);
     var statusOption = $(this).val();
