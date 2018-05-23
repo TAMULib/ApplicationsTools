@@ -157,7 +157,7 @@ body {
   background: #f5f5f5;
   border-bottom: 1px solid #1d1c1d;
   cursor: move;
-  padding: 10px;
+  padding: 5px;
   
   &.di {
     background: #FAF394;
@@ -199,6 +199,7 @@ body {
   display:flex;
   position: relative;
   align-items: center;
+  padding-right:5px;
   .notes-icon { padding-right:5px; }
   .hide { visibility:hidden; }
   img{ width: 15px;   align-self: flex-end;
@@ -318,10 +319,16 @@ body {
 
 
 @media screen and (max-width: 1680px) and (min-width: 1440px){
-  .wrapper{ width: 95vw;  margin: 0 8px 0 auto; }
+  .wrapper{ width: 90vw;  margin: 0 20px 0 auto; }
   .column-title { padding: 4px; font-size:1.2em;}
   .card-title h3 { font-size: 1em;}
   #trash.show { height: 50px; }
   #trash.show img {  width: 25px; padding: 10px 0px 25px 0px; }
   span.expand-colapse{ font-size: 0.65em; }
+
+  .menu label.menu-toggle { right: -35px; width: 35px; }
+  .menu label.menu-toggle span.icon { padding: 10px; }
+  .menu-checkbox:checked + .menu { width: 175px; z-index:5000; }
+
+  #static .card .card-header {padding:0;}
 }
