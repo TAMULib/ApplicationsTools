@@ -158,7 +158,7 @@ $('.card-body p').on('blur',function(){
 
 
     
-$('select option:selected' ).each(function() {
+$('input[type=radio]:checked').each(function() {
     if($(this).val() == 2){
         $(this).closest('.card-header').addClass('customer');
     };
@@ -168,10 +168,10 @@ $('select option:selected' ).each(function() {
 });
 
 
-$('select').change(function() {
-    var currentId = $(this).parent().parent().parent().parent().attr('id');
+$('input[type=radio]').change(function() {
+    var currentId = $(this).parent().parent().parent().parent().parent().parent().attr('id');
     var theId = currentId.substring(5);
-    var statusOption = $(this).val();
+    var statusOption = $(this).prop('checked', true).val();
 
     if($(this).val() == 1){
         $(this).closest('.card-header').removeClass('di customer');
@@ -189,11 +189,11 @@ $('select').change(function() {
     };
  
     $.ajax({
-        type: "POST", 
+        type: "POST",
         url: "app.php",
         data: {method:"status", id:theId, option:statusOption},
         success:function(data){
-
+            $('.options').hide();
         }
     });
 });

@@ -11,16 +11,22 @@ include 'config.php';
             $optionResults = $getOptions->fetchAll();
                         
             $cardTemplate = '';
+                    $i = 1;
                 foreach($cardResults as $card) {
-                    if($card['location'] == "$data"){
                     
+                    if($card['location'] == "$data"){
                         $settingsOptions ='';
+                        $e = 1;
                         foreach($optionResults as $setting) {
                             $settingsOptions .= '
-                            <option value="'.$setting['id'].'" '.($card['status'] == $setting['id'] ? 'selected' : '').'>'.$setting['status'].'</option>
+                                    <li>
+                                    <input type="radio" value="'.$setting['id'].'" name="group'.$i.'" '.($card['status'] == $setting['id'] ? 'checked="checked"' : '').' />
+                                    <label>'.$setting['status'].'</label>
+                                    </li>
                             ';
+                            $e++;
                         };
-
+                    
                     $cardTemplate .= '
                     <div class="card" data-column="'.$card['location'].'" id="card-'.$card['id'].'">
                         <div class="card-header">
@@ -31,7 +37,7 @@ include 'config.php';
                                 <span class="notes-icon '.($card['note'] != '' || NULL ? '' : 'hide').'"><img src="images/note.png" alt="has note" title="Card has a note" /></span>
                                 <span class="card-options"><img src="images/gear.png" /></span>
                                 <div class="options">
-                                    <select>'.$settingsOptions.'</select>
+                                     <ul>'.$settingsOptions.'</ul>
                                 </div> 
                             </div>
                         </div>
@@ -40,6 +46,7 @@ include 'config.php';
                         </div>
                     </div>';
                     }
+                    $i++;
                 }
             echo $cardTemplate;
         }
