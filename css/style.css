@@ -72,6 +72,8 @@ ol, ul {
     background: #FAF394; }
   .card-header.customer {
     background: #CEF6FE; }
+  .card-header.qa {
+    background: #f2dbf0; }
 
 .card-title {
   padding: 5px;
