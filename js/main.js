@@ -224,6 +224,27 @@ $('span.expand-colapse').on('click', function(){
     $(this).text(function(i, text){
           return text === "Expand All" ? "Collapse All" : "Expand All";
       });
+
+
     var $this = $(this).parent().parent().children('.column-content').find('.card-body');
-    $this.toggle();
+
+      $this.toggle(function(){
+          console.log($this.css('display:block').length());
+        //   if($this.css('display:block').length > 0){ this.show(); }
+      });
+
+
+        // console.log($this.show().length);
+
+    // if($this.show().length){
+    //     console.log($this.hide().length);
+    //     $this.show();
+    // }
+
+
+    // $this.toggle();
+    
+    
+
+    
 })

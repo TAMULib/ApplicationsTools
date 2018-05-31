@@ -175,6 +175,52 @@ body {
 }
 
 
+.di {
+    background: #FAF394;
+  }
+
+.customer {
+    background: #CEF6FE;
+  }
+
+.qa {
+    background: #f2dbf0;
+  }
+
+#help {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#key {
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    background: #ddd;
+    right: 25px;
+    padding: 5px;
+    width: 200px;
+    ul{
+      li{
+        &:first-child{ background: ghostwhite;}
+        border:1px solid #bbb;
+        padding:5px;
+      }
+    }
+}
+
+#hover {
+  img{
+    width:35px;
+  }
+  &:hover + #key {
+    display: block;
+  }
+}
+
+
+    
 
 
 

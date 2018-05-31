@@ -164,10 +164,26 @@ include 'app.php';
 </div>
 
 
+
+<div id="help">
+      <div id="hover"><img src="images/info.png" alt="Information" /></div>
+      <div id="key">
+        <ul>
+          <li>None</li>
+          <li class="customer">Waiting On Customer</li>
+          <li class="di">Waiting On DI</li>
+          <li class="qa">Quality Assurance</li>
+        </ul>
+      </div>
+    </div>
+
+
     <div id="trash" class="hidden">
         <img src="images/trashcan.png" alt="Delete Card" />
     </div>
     
+    
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/dragula.js"></script>
     <script src="js/main.js"></script>
