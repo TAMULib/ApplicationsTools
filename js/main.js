@@ -264,9 +264,14 @@ function getQueryVariable(variable)
 if(getQueryVariable('display') == 'true'){
     $('html').addClass('display');
     
-    console.log('true');
+
+var d1 = new Date (),
+    d2 = new Date ( d1 );
+d2.setMinutes ( d1.getMinutes() + 5 );
+console.log( 'Next refresh: ' + d2 );
+
+
     setTimeout(function() {
         window.location = window.location;
     }, 300000);
-
 }
