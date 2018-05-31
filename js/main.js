@@ -262,11 +262,11 @@ function getQueryVariable(variable)
 }
 
 if(getQueryVariable('display') == 'true'){
-    $('body').addClass('display');
+    $('html').addClass('display');
     
     console.log('true');
     setTimeout(function() {
         window.location = window.location;
-    }, 60000);
+    }, 300000);
 
 }
