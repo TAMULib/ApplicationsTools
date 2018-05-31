@@ -34,8 +34,8 @@ include 'config.php';
                                 <h3 contenteditable="true">'.$card['title'].'</h3>
                             </div>
                             <div class="card-information">
-                                <span class="notes-icon '.($card['note'] != '' || NULL ? '' : 'hide').'"><img src="images/note.png" alt="has note" title="Card has a note" /></span>
-                                <span class="card-options"><img src="images/gear.png" /></span>
+                                <span class="notes-icon '.($card['note'] != '' || NULL ? '' : 'hide').'"><img src="images/note.png" alt="has note" title="Card has a note"  class="icon"/></span>
+                                <span class="card-options"><img src="images/gear.png" class="icon"/></span>
                                 <div class="options">
                                      <ul>'.$settingsOptions.'</ul>
                                 </div> 

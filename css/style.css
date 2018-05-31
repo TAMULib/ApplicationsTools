@@ -321,6 +321,21 @@ body {
 #hover:hover + #key {
   display: block; }
 
+.display .icon, .display .menu, .display .expand-colapse {
+  display: none; }
+
+.display .wrapper {
+  margin: 0 auto; }
+
+.display #hover img {
+  display: none; }
+
+.display #key {
+  display: block;
+  bottom: 0;
+  right: 0;
+  width: 300px; }
+
 @media screen and (max-width: 1680px) and (min-width: 1272px) {
   .wrapper {
     width: 90vw;

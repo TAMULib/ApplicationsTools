@@ -221,7 +221,12 @@ body {
 
 
     
-
+.display {
+  .icon, .menu, .expand-colapse { display: none;}
+  .wrapper{ margin: 0 auto; }
+  #hover { img { display: none; } }
+  #key { display: block; bottom:0; right: 0; width: 300px;}
+}
 
 
 
