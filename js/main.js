@@ -228,10 +228,7 @@ $('span.expand-colapse').on('click', function(){
 
     var $this = $(this).parent().parent().children('.column-content').find('.card-body');
 
-      $this.toggle(function(){
-          console.log($this.css('display:block').length());
-        //   if($this.css('display:block').length > 0){ this.show(); }
-      });
+      $this.toggle();
 
 
         // console.log($this.show().length);
@@ -268,7 +265,7 @@ if(getQueryVariable('display') == 'true'){
 var d1 = new Date (),
     d2 = new Date ( d1 );
 d2.setMinutes ( d1.getMinutes() + 5 );
-console.log( 'Next refresh: ' + d2 );
+console.log( `Next refresh: ${d2}` );
 
 
     setTimeout(function() {
