@@ -42,7 +42,7 @@ include 'config.php';
                             </div>
                         </div>
                         <div class="card-body">
-                            <p contenteditable="true">'.$card['note'].'</p>
+                            <div class="card-content" contenteditable="true">'.$card['note'].'</div>
                         </div>
                     </div>';
                     }

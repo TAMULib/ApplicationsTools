@@ -126,8 +126,8 @@ $('.card-title h3').on('blur',function(){
     }; 
 });
 
-$('.card-body p').on('blur',function(){
-    var note = $('.card-body p').html();
+$('.card-body div').on('blur',function(){
+    var note = $('.card-body .card-content').html();
     var currentId = $(this).parent().parent().attr('id');
     var theId = currentId.substring(5);
     
@@ -136,7 +136,6 @@ $('.card-body p').on('blur',function(){
     
 
         var note = $(this).html();
-        console.log( $(this).parent().parent().find('.card-information span.notes-icon').html() );
         
         if(note !=''){
             $(this).parent().parent().find('.card-information span.notes-icon').removeClass('hide');
