@@ -173,6 +173,7 @@ include 'app.php';
           <li class="customer">Waiting On Customer</li>
           <li class="di">Waiting On DI</li>
           <li class="qa">Quality Assurance</li>
+          <li class="approved">Approved</li>
         </ul>
       </div>
     </div>

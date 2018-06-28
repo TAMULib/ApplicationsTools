@@ -167,6 +167,9 @@ $('input[type=radio]:checked').each(function() {
     if($(this).val() == 4){
         $(this).closest('.card-header').addClass('qa');
     };
+    if($(this).val() == 5){
+        $(this).closest('.card-header').addClass('approved');
+    };
 });
 
 
@@ -179,22 +182,33 @@ $('input[type=radio]').change(function() {
         $(this).closest('.card-header').removeClass('di');
         $(this).closest('.card-header').removeClass('customer');
         $(this).closest('.card-header').removeClass('qa');
+        $(this).closest('.card-header').removeClass('approved');
     };
 
     if($(this).val() == 2){
         $(this).closest('.card-header').addClass('customer');
         $(this).closest('.card-header').removeClass('di');
         $(this).closest('.card-header').removeClass('qa');
+        $(this).closest('.card-header').removeClass('approved');
     };
 
     if($(this).val() == 3){
         $(this).closest('.card-header').addClass('di');
         $(this).closest('.card-header').removeClass('customer');
         $(this).closest('.card-header').removeClass('qa');
+        $(this).closest('.card-header').removeClass('approved');
     };
 
     if($(this).val() == 4){
         $(this).closest('.card-header').addClass('qa');
+        $(this).closest('.card-header').removeClass('customer');
+        $(this).closest('.card-header').removeClass('di');
+        $(this).closest('.card-header').removeClass('approved');
+    };
+
+    if($(this).val() == 5){
+        $(this).closest('.card-header').addClass('approved');
+        $(this).closest('.card-header').removeClass('qa');
         $(this).closest('.card-header').removeClass('customer');
         $(this).closest('.card-header').removeClass('di');
     };

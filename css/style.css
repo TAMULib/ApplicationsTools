@@ -297,6 +297,9 @@ body {
 .qa {
   background: #f2dbf0; }
 
+.approved {
+  background: #c8d9aa; }
+
 #help {
   position: fixed;
   bottom: 0;
