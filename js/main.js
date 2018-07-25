@@ -223,10 +223,17 @@ $('input[type=radio]').change(function() {
     });
 });
 
-$('.card-options').on('click',function() {
+
+$('.card-options').click(function(e) {
     var $this = $(this).parent().find('.options');
+    e.stopPropagation();
     $this.toggle();
 });
+
+$(document).click( function(){
+     $('.options').hide();
+});
+
 
 $('.card-header').on('dblclick',function() {
     var $this = $(this).parent().find('.card-body');
