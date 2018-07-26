@@ -79,7 +79,7 @@ ol, ul {
     padding: 2px;
     overflow: hidden;
     cursor: pointer;
-    max-width: 550px; }
+    min-width: 250px; }
     .card-title h3:hover, .card-title h3:focus {
       outline-color: #ccc; }
       .card-title h3:hover:after, .card-title h3:focus:after {
