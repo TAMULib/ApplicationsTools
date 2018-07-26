@@ -40,7 +40,8 @@ drake.on('drag', function(el, source) {
     
         $("#trash").addClass("show");
         $("#trash").removeClass("hidden");
-    
+        
+
     if(el.parentNode.id == "static"){
         $("#trash").removeClass("show");
         $("#trash").addClass("hidden");
@@ -73,7 +74,7 @@ drake.on('drop', function(el) {
         $("#trash").addClass("hidden");
     }
 
-    if(currentClass !== "" && currentId !== ''){ 
+    if(currentClass !== '' && currentId !== ''){ 
         el.dataset.column = currentClass;
 
          $.ajax({
