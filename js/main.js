@@ -37,7 +37,7 @@ var drake = dragula(staticColumns, {
 drake.on('drag', function(el, source) {
     var currentClass = el.parentNode.id;
     el.classList.remove(currentClass);
-    
+
         $("#trash").addClass("show");
         $("#trash").removeClass("hidden");
         
@@ -105,8 +105,6 @@ drake.on('drop', function(el) {
     }
 
 });
-
-
 
 
 $('.card-title h3').on('blur',function(){
@@ -235,6 +233,11 @@ $(document).click( function(){
      $('.options').hide();
 });
 
+$(document).mouseup( function(){
+     $("#trash").removeClass("show");
+     $("#trash").addClass("hidden");
+});
+
 
 $('.card-header').on('dblclick',function() {
     var $this = $(this).parent().find('.card-body');
@@ -248,23 +251,7 @@ $('span.expand-colapse').on('click', function(){
 
 
     var $this = $(this).parent().parent().children('.column-content').find('.card-body');
-
-      $this.toggle();
-
-
-        // console.log($this.show().length);
-
-    // if($this.show().length){
-    //     console.log($this.hide().length);
-    //     $this.show();
-    // }
-
-
-    // $this.toggle();
-    
-    
-
-    
+      $this.toggle();    
 });
 
 
