@@ -6,7 +6,6 @@ include 'config.php';
         public function theCards($data){
             $getCards = $this->connect()->query("SELECT * FROM cards");
             $cardResults = $getCards->fetchAll();
-
             $getOptions = $this->connect()->query("SELECT * FROM card_status");
             $optionResults = $getOptions->fetchAll();
                         

@@ -232,10 +232,10 @@ body {
 
 
 
-@media screen and (max-width: 1680px) and (min-width: 1272px){
+@media screen and (min-width: 1272px) and (max-width: 1680px)  {
   .wrapper{ width: 90vw;  margin: 0 50px 0 auto; }
   .column-title { padding: 4px; font-size:1em;}
-  .card-title h3 { font-size: 1em;}
+  .card-title h3 { font-size: 1em; min-width:100px;}
   #trash.show { height: 50px; }
   #trash.show img {  width: 25px; padding: 10px 0px 25px 0px; }
   span.expand-colapse{ font-size: 0.65em; }

@@ -138,7 +138,12 @@ $('.card-body div').on('blur',function(){
         
         if(note !=''){
             $(this).parent().parent().find('.card-information span.notes-icon').removeClass('hide');
-        } else{
+        } else {
+           $(this).parent().parent().find('.card-information span.notes-icon').addClass('hide');
+        }
+        
+        if(note == '<br>'){
+            $('br').remove();
             $(this).parent().parent().find('.card-information span.notes-icon').addClass('hide');
         }
 
