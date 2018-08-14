@@ -42,6 +42,7 @@ include 'config.php';
                         </div>
                         <div class="card-body">
                             <div class="card-content" contenteditable="true">'.$card['note'].'</div>
+                            <div class="clear-all '.($card['note'] != '' || NULL ? '' : 'hide').'"><button><img src="images/trashcan.png" alt="Delete Note" /><span>Delete Note<span></button></div>
                         </div>
                     </div>';
                     }

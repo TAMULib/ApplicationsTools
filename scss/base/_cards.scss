@@ -44,7 +44,6 @@
   align-items: center;
   padding-right:5px;
   .notes-icon { padding-right:5px; }
-  .hide { visibility:hidden; }
   img{ width: 15px;   align-self: flex-end;
   }
 }
@@ -104,6 +103,7 @@
     background: #fff;
     min-height:150px;
     display:none;
+    position: relative;
   .card-content {
   max-width:550px;
   white-space: normal;
@@ -119,5 +119,29 @@
         display: inline-block;
       }
     }
+  }
+  .clear-all {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+      button{
+        display: block;
+        border: none;
+        width: 115px;
+        padding: 4px;
+        background: #fb6666;
+        padding-top: 7px;
+        text-align: center;
+          span {
+            color: ghostwhite;
+            position: relative;
+            top: -2px;
+            padding-left: 10px;
+          }
+          img { 
+                width: 15px;
+                padding-left: 3px;
+          }
+      }
   }
 }

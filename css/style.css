@@ -97,8 +97,6 @@ ol, ul {
   padding-right: 5px; }
   .card-information .notes-icon {
     padding-right: 5px; }
-  .card-information .hide {
-    visibility: hidden; }
   .card-information img {
     width: 15px;
     align-self: flex-end; }
@@ -140,7 +138,8 @@ ol, ul {
   padding: 10px;
   background: #fff;
   min-height: 150px;
-  display: none; }
+  display: none;
+  position: relative; }
   .card-body .card-content {
     max-width: 550px;
     white-space: normal; }
@@ -154,6 +153,26 @@ ol, ul {
         height: 24px;
         position: absolute;
         display: inline-block; }
+  .card-body .clear-all {
+    position: absolute;
+    bottom: 5px;
+    right: 5px; }
+    .card-body .clear-all button {
+      display: block;
+      border: none;
+      width: 115px;
+      padding: 4px;
+      background: #fb6666;
+      padding-top: 7px;
+      text-align: center; }
+      .card-body .clear-all button span {
+        color: ghostwhite;
+        position: relative;
+        top: -2px;
+        padding-left: 10px; }
+      .card-body .clear-all button img {
+        width: 15px;
+        padding-left: 3px; }
 
 body {
   background: url(../images/denim.png); }
@@ -195,6 +214,9 @@ body {
 
 #static .description {
   min-height: 95px; }
+
+.hide {
+  visibility: hidden; }
 
 .sub-columns {
   padding: 5px;

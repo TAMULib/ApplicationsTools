@@ -130,14 +130,11 @@ $('.card-body div').on('blur',function(){
     var currentId = $(this).parent().parent().attr('id');
     var theId = currentId.substring(5);
     
-
-
-    
-
         var note = $(this).html();
         
         if(note !=''){
             $(this).parent().parent().find('.card-information span.notes-icon').removeClass('hide');
+            $('.card-body').children('.clear-all').removeClass('hide')
         } else {
            $(this).parent().parent().find('.card-information span.notes-icon').addClass('hide');
         }
@@ -147,6 +144,37 @@ $('.card-body div').on('blur',function(){
             $(this).parent().parent().find('.card-information span.notes-icon').addClass('hide');
         }
 
+
+        $.ajax({
+        type: "POST", 
+        url: "app.php",
+        data: {method:"note", id:theId, message:note},
+        success:function(data){
+
+        }
+    });
+});
+
+
+
+$('.clear-all button').on('click',function(){
+    var currentId = $(this).parent().parent().parent().attr('id');
+    var theId = currentId.substring(5);
+    var note = $(this).parent().parent().find('.card-content').empty().html();
+        
+        if(note !=''){
+            $(this).parent().parent().parent().find('.card-information span.notes-icon').removeClass('hide');
+        } else {
+           $(this).parent().parent().parent().find('.card-information span.notes-icon').addClass('hide');
+        }
+        
+        if(note == '<br>'){
+            $('br').remove();
+            $(this).parent().parent().find('.card-information span.notes-icon').addClass('hide');
+        }
+
+            console.log($(this).closest('.clear-all'));
+            $(this).closest('.clear-all').addClass('hide');
 
         $.ajax({
         type: "POST", 
