@@ -15,6 +15,12 @@ include 'app.php';
     <header>
         <div class="global-header">
             <img src="images/Libraries_white.svg" alt="Texas A&amp;M Libraries" />
+            <div class="date-time">
+            <span class="date"><?php echo date("F d, Y"); ?> </span>
+            <span class="time">
+                <span id="timer"></span>
+            </span>
+          </div>
         </div>
     </header>
 

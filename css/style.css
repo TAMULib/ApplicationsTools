@@ -189,6 +189,13 @@ body {
 .global-header img {
   width: 300px; }
 
+.global-header .date-time {
+  padding: 0 20px 0 0;
+  font-size: 1.25em; }
+
+.global-header .date-time span.date {
+  padding-right: 10px; }
+
 .wrapper {
   display: grid;
   grid-gap: 10px;

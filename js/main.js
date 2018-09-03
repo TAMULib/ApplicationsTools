@@ -303,13 +303,27 @@ if(getQueryVariable('display') == 'true'){
     $('html').addClass('display');
     
 
-var d1 = new Date (),
-    d2 = new Date ( d1 );
-d2.setMinutes ( d1.getMinutes() + 5 );
-console.log( `Next refresh: ${d2}` );
-
+    var d1 = new Date (),
+        d2 = new Date ( d1 );
+    d2.setMinutes ( d1.getMinutes() + 5 );
+    console.log( `Next refresh: ${d2}` );
 
     setTimeout(function() {
         window.location = window.location;
     }, 300000);
 }
+
+
+    setInterval(function () {
+        var currentTime = new Date();
+        var currentHours = currentTime.getHours();
+        var currentMinutes = currentTime.getMinutes();
+        var currentSeconds = currentTime.getSeconds();
+                currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+                currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+        var timeOfDay = (currentHours < 12) ? "AM" : "PM";
+                currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
+                currentHours = (currentHours == 0) ? 12 : currentHours;
+        var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
+        document.getElementById("timer").innerHTML = currentTimeString;
+    }, 1000);
