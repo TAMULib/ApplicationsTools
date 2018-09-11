@@ -8,6 +8,7 @@ const staticColumns = [
   document.getElementById("moving-pre"),
   document.getElementById("on-deck"),
   document.getElementById("current"),
+  document.getElementById("wrap-up"),
   document.getElementById("static"),
   document.getElementById("trash")
 ];

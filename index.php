@@ -56,8 +56,7 @@ include 'app.php';
 
 
 
-<div class="wrapper" id="app">
-  
+<div class="wrapper" id="app">  
   <div class="columns">
     <div class="sub-columns">
         <div class="column">
@@ -111,6 +110,15 @@ include 'app.php';
           </div>
             <div id="current" class="column-content">
               <?php $getCards->theCards('5');  ?>
+            </div>
+        </div>
+        <div class="column">
+          <div class="column-header">
+            <h2 class="column-title">Wrap Up</h2>
+            <span class="expand-colapse">Expand All</span>
+          </div>
+            <div id="wrap-up" class="column-content">
+              <?php $getCards->theCards('10');  ?>
             </div>
         </div>
     </div>
