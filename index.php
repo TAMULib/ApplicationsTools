@@ -55,6 +55,11 @@ include 'app.php';
 
 
 
+<div class="headers">
+<div class="title sprints"><h3>Sprints</h3></div>
+<div class="title deployment"><h3>Deployment</h3>
+</div>
+</div>
 
 <div class="wrapper" id="app">  
   <div class="columns">
