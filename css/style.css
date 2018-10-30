@@ -28,7 +28,8 @@ ol, ul {
   background: #ddd;
   width: 240px;
   transform: translate3d(-240px, 0, 0);
-  transition: transform 0.35s; }
+  transition: transform 0.35s;
+  z-index: 3; }
   .menu .column-content {
     min-height: 25px;
     background: #ddd;
@@ -197,6 +198,32 @@ body {
 .global-header .date-time span.date {
   padding-right: 10px; }
 
+.headers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 95vw;
+  margin: -25px 35px -55px auto; }
+  .headers .title {
+    font-size: 3.8em;
+    font-weight: 900;
+    grid-gap: 10px;
+    padding: 5px;
+    color: ghostwhite;
+    text-align: center;
+    opacity: 0.15;
+    text-transform: uppercase; }
+    .headers .title h3 {
+      font-family: 'Anton', sans-serif;
+      letter-spacing: 5px; }
+
+.sprints {
+  grid-column: 2;
+  margin: 10px 5px -9px 7px; }
+
+.deployment {
+  grid-column: 3/ span 4;
+  margin: 10px 10px -9px 5px; }
+
 .wrapper {
   display: grid;
   grid-gap: 10px;
@@ -204,7 +231,8 @@ body {
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
   width: 95vw;
-  margin: 0 35px 0 auto; }
+  margin: 0 35px 0 auto;
+  position: relative; }
 
 #static .card {
   box-shadow: 0px 0px 54px -15px rgba(0, 0, 0, 0.75); }
@@ -399,13 +427,7 @@ body {
   #static .card .card-header {
     padding: 0; }
   .headers {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    width: 90vw;
-    margin: 0 50px 0 auto; }
+    width: 95vw;
+    margin: -25px 35px -55px auto; }
     .headers .title {
-      font-size: 1.2em;
-      font-weight: 900;
-      grid-gap: 10px;
-      margin: 10px 5px -9px 5px;
-      padding: 5px; } }
+      margin: 10px 5px -9px 80px; } }
