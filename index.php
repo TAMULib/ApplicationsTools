@@ -27,30 +27,34 @@ include 'app.php';
     <input type="checkbox" id="menu" name="menu" class="menu-checkbox" />
     <div class="menu">
       <label class="menu-toggle" for="menu"> <span class="icon">&#9776;</span></label>
+       
+
       <div id="static" class="container column-content">
-        
-          <div class="card">
+      
+        <div class="card">
             <div class="card-header">
                 <div class="card-title">
                     <h3> </h3>
                 </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <h3>DSpace</h3>
-                </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <h3>DAME</h3>
-                </div>
-            </div>
-          </div>
-      </div>
+
+        <?php
+          $json = file_get_contents('https://api.library.tamu.edu/project-management-service/projects');
+          $openProjects = json_decode($json, true);
+
+          foreach($openProjects["payload"]["ArrayList<Project>"] as $project) { 
+              echo '
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title">
+                      <h3>'.$project["name"].'</h3>
+                  </div>
+                  </div>
+              </div>';
+          }
+        ?>
+    </div>
     </div>
 
 
