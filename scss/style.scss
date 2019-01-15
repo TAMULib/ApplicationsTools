@@ -68,15 +68,22 @@ body {
 }
 
 #static {
+    &.column-content {
+      position: fixed;
+      height:100%;
+      overflow: scroll;
+      right:0;
+    }
+
     & .card {
         box-shadow: 0px 0px 54px -15px rgba(0,0,0,0.75);
     }
     & .card-title {
-        min-height: 40px;
+        height: 40px;
 
         h3 {
             font-size: 1em;
-            padding: 0px;
+            padding: 5px 0 0 0;
               &:hover {
                 cursor: move;
 
@@ -136,6 +143,7 @@ body {
   background: #ddd;
   margin-bottom: 20px;
   padding: 5px;
+  
 }
 
 #app .description{ display:none;}
@@ -284,8 +292,8 @@ body {
   .menu-checkbox:checked + .menu { width: 240px; z-index:5000; }
 
   #static .card .card-header {padding:0;}
-  #static .card-title h3 { font-size: 0.85em; }
-
+  #static .card-title h3 { font-size: 0.85em; padding-top:8px; }
+  #static.column-content { width:240px; }
 
 
   .headers {
