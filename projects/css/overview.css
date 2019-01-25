@@ -1,0 +1,157 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+
+:root {
+  --white: #f5f5f5;
+  --black: #1d1c1d;
+  --yellow: #ffc222;
+  --red: #fb6666;
+  --green: #8aad4e;
+  --blue: #00adf1;
+  --purple: #d88fd0;
+}
+
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+body,h1,h2,h3,h4,h5,h6,
+p,ol,ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Lato", sans-serif;
+}
+
+ol,ul { list-style: none; }
+
+body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2283/denim.png);
+}
+/* Header */
+.global-header {
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.global-header img { width: 300px; }
+.global-header .date-time {
+  padding: 0 30px 0 0;
+  font-size: 1.25em;
+}
+
+h2 {  
+  color: var(--white);
+  font-size: 2.25em;
+  font-weight: 700;
+  padding: 10px;
+}
+
+
+
+/* SPRINTS */
+section { 
+  padding:10px;
+  width:85%;
+  margin: 0 auto;
+}
+
+.sprints-container {
+  display: grid;
+  grid-gap:10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sprint { 
+  background: var(--white); 
+  padding:5px;
+}
+
+.sprint > h3, .sprint > h4 {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.sprint > h3 {
+  font-size: 1.55em;
+  font-weight: 700;
+}
+
+.sprint > h4 {
+  font-size: 1.05em;
+  font-weight: 500;
+}
+
+.card-stats ul {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.card-stats ul li { 
+  min-width:30px;
+  padding: 5px;
+  text-align: center;
+  color: var(--black);
+  margin:2px;
+}
+
+
+.stat-none { background: var(--red); }
+.stat-future { background: var(--yellow) }
+.stat-in-progress { background: var(--blue) }
+.stat-completed { background: var(--green); }
+.stat-accepted { background: var(--purple); }
+
+
+
+
+
+
+/* PROJECTS */
+table { 
+  width:100%; 
+  border-collapse: collapse; 
+  padding:10px;
+}
+
+thead { 
+  background: var(--yellow); 
+  text-align:left; 
+  border-bottom: 1px solid var(--black);
+}
+
+th { 
+  padding: 10px; 
+  font-weight: 700;
+}
+
+tbody td { 
+  padding: 10px; 
+  border-bottom: 1px solid var(--black);
+}
+
+tbody td.project-title { 
+  font-weight:700;
+  font-size: 1.2em;
+}
+
+tbody tr { background: var(--white); }
+tbody tr:nth-child(-n+2) { 
+  color: var(--black);
+  border-collapse:10px; 
+  border-spacing:5em;
+}
+
+tbody tr:nth-child(-n+2) > td{ 
+  /* background: #cceefc; */
+  color: var(--black);
+  font-size: 1.075em;
+  font-weight: 700;
+}

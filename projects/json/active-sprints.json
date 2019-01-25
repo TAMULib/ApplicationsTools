@@ -1,0 +1,921 @@
+{
+  "meta": {
+    "status": "SUCCESS",
+    "action": null,
+    "message": "Your request was successful",
+    "id": null
+  },
+  "payload": {
+    "ArrayList<Sprint>": [
+      {
+        "identifier": "Timebox:7879",
+        "name": "Prototyping Sprint",
+        "projectName": "Cap",
+        "cards": [
+          
+        ]
+      },
+      {
+        "identifier": "Timebox:7820",
+        "name": "Sprint 3",
+        "projectName": "Chronam",
+        "cards": [
+          {
+            "name": "B-03351",
+            "title": "As a Customer I want to see 8 random issues on the front page, so that blank entries don't ever show",
+            "body": "",
+            "estimate": "2.0",
+            "members": [
+              
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01153",
+            "title": "Date limiting functionallity in search not working.",
+            "body": "",
+            "estimate": "3.0",
+            "members": [
+              
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03352",
+            "title": "Remove route for for viewing MARC records.",
+            "body": "",
+            "estimate": "0.0",
+            "members": [
+              
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03353",
+            "title": "Add pagination to bottom of search results.",
+            "body": "",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "Done",
+            "type": "Story"
+          },
+          {
+            "name": "B-03354",
+            "title": "Add metadata to search results",
+            "body": "",
+            "estimate": "3.0",
+            "members": [
+              
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03367",
+            "title": "Rearrange and remove uneeded fields from advanced search page.",
+            "body": "",
+            "estimate": "",
+            "members": [
+              
+            ],
+            "status": "Done",
+            "type": "Story"
+          },
+          {
+            "name": "B-03369",
+            "title": "Search bar should redirect to search results when submitted.",
+            "body": "",
+            "estimate": "",
+            "members": [
+              
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01155",
+            "title": "Batch loading is failing on call to library of congress' website.",
+            "body": "<p>Attempting to retrieve an xml file from the LC website, but being denied permission.</p>\n<p>Moved a copy of the file to:</p>\n<p>http://php.library.tamu.edu/marc.xml</p>\n<p>And now hitting that url for the file.</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Ryan Laddusaw",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03370",
+            "title": "Add advanced search link.",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Ryan Laddusaw",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          }
+        ]
+      },
+      {
+        "identifier": "Timebox:8416",
+        "name": "Sprint 14",
+        "projectName": "CORAL - Electronic Resource Management",
+        "cards": [
+          {
+            "name": "B-03467",
+            "title": "Update new feedback and purchase forms to incorporate all fields from the existing feedback form",
+            "body": "<p>Needs to have the new styling and needs to pass WAVE ADA check.</p>\n<p> </p>\n<p>All the key/value information will go right into the Notes field.</p>\n<p> </p>\n<p>We will be finishing out and fully styling the feedback form, the request a purchase form, and ideally the https://coral.library.tamu.edu/resourcelink.php?resource=1440 link resolver while we're at it.</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jeremy Huff",
+                "avatarUrl": "https://www15.v1host.com/TexasAMLibrary/image.img/1706"
+              },
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              },
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03578",
+            "title": "Sort by title by default when viewing resource list with trial/purchase requests hidden",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Done",
+            "type": "Story"
+          },
+          {
+            "name": "B-03579",
+            "title": "Sort by date created by default when viewing trial/purchase requests",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Done",
+            "type": "Story"
+          },
+          {
+            "name": "B-03580",
+            "title": "Defaults on submitted trial requests",
+            "body": "<p>\"By default, the Resource Type should be “Database” and the Format should be “Electronic” on submitted trial requests\"</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Done",
+            "type": "Story"
+          },
+          {
+            "name": "B-03581",
+            "title": "When a trial is sumitted through API, don't show the \"Note:\" header",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01193",
+            "title": "Vendor quote field on trial request form should not be required",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03582",
+            "title": "When Trial Feedback is entered through the API, make it a \"Trial feedback\" type note",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01194",
+            "title": "Acquisition Type not being cloned",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01195",
+            "title": "Trial request form not triggering trial request workflow",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01196",
+            "title": "Manually started workflows are not archiving when complete",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Done",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01197",
+            "title": "In Journal Maintenance, publishers not being mapped by HEGIS code",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01198",
+            "title": "In Journal Maintenance, only title field is being pulled",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03583",
+            "title": "For Trial Requests, add fields for Selector's personal info",
+            "body": "<p>email, title, name</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03584",
+            "title": "When trial request is created through API, add the Trial Ends language to the beginning of the description",
+            "body": "<p>\"Trial ends.  Provide Feedback to [selector with email link], [selector title] or fill out a &lt;a&gt;short survey&lt;/a&gt;.</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03585",
+            "title": "Export \"Trial feedback\" type notes",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Done",
+            "type": "Story"
+          },
+          {
+            "name": "B-03586",
+            "title": "Auto-populate contact info in the trial request form when the organization is selected by pulling from the Organizations module",
+            "body": "<p>Pull the first contact from the list of contacts for the organization, and the user can then edit this info if necessary.</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01199",
+            "title": "Stray capitalized \"Downtime\" in Issues tab",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01200",
+            "title": "trial feedback form fails to submit because resourceID parameter is case-sensitive",
+            "body": "<p>if (typeof queryObject.resourceid !== 'undefined') {</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          }
+        ]
+      },
+      {
+        "identifier": "Timebox:7890",
+        "name": "Sprint 3",
+        "projectName": "Instructional Apps",
+        "cards": [
+          {
+            "name": "B-03307",
+            "title": "STATS: As an admin I would like to Assume users.",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01157",
+            "title": "CAS Authentication is broke when renewing ticket",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "In Progress",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03387",
+            "title": "Importing data from claimed request",
+            "body": "<p>Doug,</p>\n<p>Sarah encountered a new instruction stats error.  She imported her data over from her claimed requests.  When she goes to edit the record from view records, the data will not retain the course name/number.  It just keeps disappearing. </p>\n<p> </p>\n<p>We also have the issue of the session characteristics and teaching methods continuing to not show when someone pulls data from the claimed requests.</p>\n<p> </p>\n<p>GWILA - </p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03388",
+            "title": "Test Functionality with JAWS - Aria tags in HTML",
+            "body": "<p>I think this issue may be related to a lack of Aria tags in the HTML for the Instructional Stats Manager. There is no JAWS emulator for Chrome, so the only way to test it is to try it on a machine with JAWS.</p>",
+            "estimate": "",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03389",
+            "title": "Change filtering tabs",
+            "body": "<p>We only want two tabs one that shows all records that I am associated with and then ALL records.</p>\n<p><img src=\"https://www15.v1host.com/TexasAMLibrary/embedded.img/7895\" alt=\"\" width=\"367\" height=\"87\" data-oid=\"undefined\"></p>\n<p>The tab names woudl be My Records and All Records</p>\n<p> </p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03390",
+            "title": "As and admin ability to delete requests",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Jason Savell",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          }
+        ]
+      },
+      {
+        "identifier": "Timebox:8493",
+        "name": "Sprint 6",
+        "projectName": "Library Service Status System",
+        "cards": [
+          {
+            "name": "B-03435",
+            "title": "As a manager, I'd like to send an Idea that is really an issue to Sugar",
+            "body": "<p>transition to \"sent to helpdesk\" state</p>",
+            "estimate": "2.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "D-01190",
+            "title": "\"Login to Vote\" button shows on Service view even if there are no Feature Proposals available",
+            "body": "<p>If no features active for that service then no button should show</p>\n<p><img src=\"https://www15.v1host.com/TexasAMLibrary/embedded.img/8379\" alt=\"\" data-oid=\"undefined\"></p>",
+            "estimate": "0.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03565",
+            "title": "As a Product Owner, I would like \"In Progress\" Feature proposals hidden and non-votable.",
+            "body": "<p> </p>\n<p>In Progress will never be on public display and only visible to Service Managers.</p>",
+            "estimate": "2.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03617",
+            "title": "As a Stakeholder, I would like to optionally associate my email address with my Ideas so that I can receive emails later",
+            "body": "<p>A checkbox, selected by default, indicating that the stakeholder wants to receive emails.</p>\n<p>Prepopulate an email field with netid.  This can be edited.  Grey out the email field if unchecked.</p>",
+            "estimate": "2.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03621",
+            "title": "As a Stakeholder, I would like the Service pre-populated when I link to the Idea submission form from a given context",
+            "body": "<p>Use either a query or path in the URL that the Item creation form can use to pre-populate the </p>",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03622",
+            "title": "As a Stakeholder, I would like the Service pre-populated when I link to the Issue submission form from a given context",
+            "body": "<p>We think this has been done, but it needs documentation.</p>\n<p> </p>",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03623",
+            "title": "As a Product Owner, I would like to send Ideas to Sugar",
+            "body": "<p>In case they would have been better rendered as issues.  This changes the status to \"Sent to Sugar\"</p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03624",
+            "title": "As a Developer, I would an enumerated Status associated with each idea",
+            "body": "<p>Required for business logic of several other cards.</p>\n<p>Waiting on Review</p>\n<p>Elevated</p>\n<p>Sent to Helpdesk</p>\n<p>Rejected</p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03625",
+            "title": "As a Product Owner, I would like to reject Ideas",
+            "body": "<p>Must enter text for rejection.  Persist on the idea.  Email owner of Idea if opted-in.  Change status to Rejected.</p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03626",
+            "title": "As a Product Owner, I would like to filter the list of Feature Proposals by state",
+            "body": "",
+            "estimate": "0.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03627",
+            "title": "As a Product Owner, I would like to select the state of a Feature Proposal on creation (default \"In Progress\")",
+            "body": "",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03629",
+            "title": "As a Product Owner, I would like to flag Feature Proposals as private",
+            "body": "<p>Default would not be private.</p>\n<p> </p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03630",
+            "title": "As a Product Owner, I would like \"private\" Feature proposals to be shown only to logged-in users",
+            "body": "<p>On the service view is the only place this will be implicated for now.</p>\n<p> </p>\n<p>Here is some old requirements gather text motivating this feature:</p>\n<p>...so that I can think about ones for which voting has been closed or hide ones that I am still working on.  Also, patrons should not be annoyed by ones that can't or shouldn't be acting on.</p>\n<p> </p>\n<p>\"For Features we need the ability to make it active or something to remove it from public display.  </p>\n<p>[For example] voting is closed on Test 2 so I want to suppress it from public view while I think about it.</p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03631",
+            "title": "As a Product Owner, I would like to sort the list of Feature Proposals by public/private",
+            "body": "",
+            "estimate": "0.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03632",
+            "title": "As a Developer, I would like an enumerated State associated with each Feature Proposal",
+            "body": "<p>In Progress:  still being drafted, hidden from others, no voting</p>\n<p>Active: Open for voting by those logged in, displayed to all users</p>\n<p>Submitted: Sent off to project management API.</p>\n<p>On Hold:  Closed for voting, but not sent to project management API.  \"There may be hope\".</p>\n<p>Rejected: Closed for voting, terminal state.</p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03633",
+            "title": "As a Product Owner, I would like to reject a Feature Proposal",
+            "body": "<p>Require text. </p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03634",
+            "title": "As an Admin, I would like to delete Ideas",
+            "body": "<p>Have a confirmation button.  Disallow for elevated Ideas.</p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03637",
+            "title": "Add \"Scholars\" as a location when creating notifications",
+            "body": "",
+            "estimate": "0.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "D-01208",
+            "title": "Submitting a bug/issue does not appear to work",
+            "body": "<p>No effect from clicking Submit when reporting a bug/issue.</p>",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03638",
+            "title": "Hide the Feature Proposals section on public service view when there are 0 FPs",
+            "body": "",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "D-01209",
+            "title": "Remove extra space above \"Notes\" on service management view",
+            "body": "",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03640",
+            "title": "Column header changes",
+            "body": "<p>On service tab of the management dashboard</p>\n<p>Public =&gt; Visible to Anonymous Users</p>\n<p>Short List =&gt; Prominent Display</p>",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03642",
+            "title": "On Ideas list, change \"Elevated\" column to \"Status\" and make elevated status link to FP",
+            "body": "",
+            "estimate": "1.0",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03643",
+            "title": "On Services tab, have data in \"Auto Updating URL\" column be just the word \"true\" hyperlinked to the service.",
+            "body": "",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03644",
+            "title": "As a Developer, I would like Ideas' status changed back to Waiting on Review when they are removed from FPs (i.e. de-elevated)",
+            "body": "",
+            "estimate": "0.5",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          },
+          {
+            "name": "B-03646",
+            "title": "As a Product Owner, I would like to edit the state of a Feature Proposal",
+            "body": "",
+            "estimate": "",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Story"
+          }
+        ]
+      },
+      {
+        "identifier": "Timebox:8466",
+        "name": "SFFRD Sprint 2",
+        "projectName": "SFFRD",
+        "cards": [
+          {
+            "name": "B-03599",
+            "title": "As a manager, I need to filter records to help with data management",
+            "body": "<p>In the Records management, we need to filter based on Record Type, Language, Finalized, Pending, and Year Published.</p>",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03600",
+            "title": "As a manager, I'd like the \"edit this record\" clicker on the item surrogates in the browse listing",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01201",
+            "title": "On record management, search string sometimes disappears when typing",
+            "body": "",
+            "estimate": "",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01202",
+            "title": "Record Management search needs to be full-text",
+            "body": "",
+            "estimate": "",
+            "members": [
+              
+            ],
+            "status": "None",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03601",
+            "title": "As a patron, i want to use the back button on search results",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "D-01203",
+            "title": "Search By Heading does not change when type in dropdown changes",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01204",
+            "title": "Advanced search should be AND across fields",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "D-01205",
+            "title": "Title search on advanced search not filtering properly",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Defect"
+          },
+          {
+            "name": "B-03602",
+            "title": "As a manager, I would like to see what links would be unlinked when I delete an entity (e.g. Author)",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          },
+          {
+            "name": "B-03603",
+            "title": "As a patron, I want to deep-link to any search/browse result",
+            "body": "",
+            "estimate": "",
+            "members": [
+              {
+                "name": "Kevin Day",
+                "avatarUrl": "https://www15.v1host.com/s/18.1.4.12/css/images/no_avatar.png"
+              }
+            ],
+            "status": "Accepted",
+            "type": "Story"
+          }
+        ]
+      }
+    ]
+  }
+}

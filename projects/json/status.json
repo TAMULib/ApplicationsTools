@@ -1,0 +1,41 @@
+{
+    "meta": {
+        "status": "SUCCESS",
+        "action": null,
+        "message": "Your request was successful",
+        "id": null
+    },
+    "payload": {
+        "ArrayList<Status>": [
+            {
+                "id": 1,
+                "identifier": "None",
+                "mapping": [
+                    "Future",
+                    "None"
+                ]
+            },
+            {
+                "id": 2,
+                "identifier": "In Progress",
+                "mapping": [
+                    "In Progress"
+                ]
+            },
+            {
+                "id": 3,
+                "identifier": "Done",
+                "mapping": [
+                    "Done"
+                ]
+            },
+            {
+                "id": 4,
+                "identifier": "Accepted",
+                "mapping": [
+                    "Accepted"
+                ]
+            }
+        ]
+    }
+}
