@@ -48,6 +48,48 @@
           }
 
           
+          
+
+// $ii = 0;
+// $resultArr = array();  
+// while (isset($sprints[$ii]['id'])) {
+//   $resultArr[] = array('id' => $sprints[$ii]['id'], 'project'=>[$sprints[$ii]['project']]);
+
+//   if(in_array($sprints[$ii]['name'], $resultArr) == false) {
+//     array_push($resultArr, [$sprints[$ii]['project']]);
+//   } else {
+//     array_splice($resultArr, $ii, 1);
+//   }
+
+
+//   $ii++;
+// }
+
+
+
+// echo '<pre>';
+// print_r(json_encode($resultArr));
+// echo '</pre>';
+
+
+
+          
+              
+            
+            
+            
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          $count = 0;
           foreach ($sprints as $sprint) {
             $totalCards = count($sprint['cards']); 
                 $none = 0;
@@ -70,9 +112,9 @@
                 }
 
            
-            echo '<div class="sprint">'.
-              $sprint['name'] .'<br/>
-              <span class="project"><h3>'.$sprint['project'].'</h3></span>
+            echo '<div class="sprint" data-sprint="'.$sprint['id'].'">
+              <span class="project"><h3>'.$sprint['name'].'<br/>
+              <span class="project">'.$sprint['project'].'</span>
               <div class="card-stats">
               <ul class="stats">
               <li class="stat-none vh-center">'.$none.'</li>
@@ -82,9 +124,10 @@
               </ul>
               </div>
               </div>';
+              $count++;
           };
         ?>
-    </div>
+     </div>
 </section>
 
   <section class="projects">
@@ -101,11 +144,13 @@
       <tbody>
       <?php
         foreach ($projectstInfo as $project) { 
+
+        
             echo '<tr class="project">
-                    <td class="project-title">'.$project['name'].'</td>
-                    <td>'.$project['backlogItemCount'].'</td>
-                    <td>'.$project['issueCount'].'</td>
-                    <td>'.$project['requestCount'].'</td>
+                    <td class="project-title">'.$project['name'].'</td>'.
+                    '<td>'.($project['backlogItemCount'] >= 10 ? $project['backlogItemCount'] : '0'.$project['backlogItemCount']).'</td>
+                    <td>'.($project['issueCount'] >= 10 ? $project['issueCount'] : '0'.$project['issueCount']).'</td>
+                    <td>'.($project['requestCount'] >= 10 ? $project['requestCount'] : '0'.$project['requestCount']).'</td>
                   </tr>';
           }
       ?>
@@ -117,23 +162,54 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
-      var $sortable = $('.sortable');
-      $sortable.on('click', function(){
-        var $this = $(this);
-        var asc = $this.hasClass('asc');
-        var desc = $this.hasClass('desc');
-        $sortable.removeClass('asc').removeClass('desc');
-        if (desc || (!asc && !desc)) {
-          $this.addClass('asc');
-        } else {
-          $this.addClass('desc');
-        }
-        
-      });
+$(document).ready(function(){
+ 
+  if ( $('tr').val() < 10) x = '0' + x;
+	$(this).val(x);
+});
+
+
+function sortTable(table, col, reverse) {
+    var tb = table.tBodies[0], // use `<tbody>` to ignore `<thead>` and `<tfoot>` rows
+        tr = Array.prototype.slice.call(tb.rows, 0), // put rows into array
+        i;
+    reverse = -((+reverse) || -1);
+    tr = tr.sort(function (a, b) { // sort rows
+        return reverse // `-1 *` if want opposite order
+            * (a.cells[col].textContent.trim() // using `.textContent.trim()` for test
+                .localeCompare(b.cells[col].textContent.trim())
+               );
+    });
+    for(i = 0; i < tr.length; ++i) tb.appendChild(tr[i]); // append each row in order
+}
+
+function makeSortable(table) {
+    var th = table.tHead, i;
+    th && (th = th.rows[0]) && (th = th.cells);
+    if (th) i = th.length;
+    else return; // if no `<thead>` then do nothing
+    while (--i >= 0) (function (i) {
+        var dir = 1;
+        th[i].addEventListener('click', function () {sortTable(table, i, (dir = 1 - dir))});
+    }(i));
+}
+
+function makeAllSortable(parent) {
+    parent = parent || document.body;
+    var t = parent.getElementsByTagName('table'), i = t.length;
+    while (--i >= 0) makeSortable(t[i]);
+}
+
+window.onload = function () {makeAllSortable();};
+
     </script>
 
 </body>
 </html>
+
+
+
+
 
 
 
