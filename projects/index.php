@@ -38,57 +38,28 @@
 
         <?php
           
+          
+          
+          
           $sprintNames = array();
           for ($i = count($sprints) - 1; $i >= 0; $i--) {
-              if(in_array($sprints[$i]['name'], $sprintNames) == false) {
-                array_push($sprintNames, $sprints[$i]['name']);
-              } else {
-                array_splice($sprints, $i, 1);
+            $newSprint = $sprints[$i];
+
+            if(in_array($newSprint['name'], $sprintNames) == false) {
+              array_push($sprintNames, $newSprint['name']);
+            } else {
+              for($j = count($sprints) - 1; $j >= 0; $j--){
+                $existingSprint = &$sprints[$j];
+                if($newSprint['name'] == $existingSprint['name']) {
+                  $existingSprint['project'] = $existingSprint['project'].'</li> <li>'.$newSprint['project'].'</li>';
+                  break;
+                }
               }
+              array_splice($sprints, $i, 1);
+            }
           }
+       
 
-          
-          
-
-// $ii = 0;
-// $resultArr = array();  
-// while (isset($sprints[$ii]['id'])) {
-//   $resultArr[] = array('id' => $sprints[$ii]['id'], 'project'=>[$sprints[$ii]['project']]);
-
-//   if(in_array($sprints[$ii]['name'], $resultArr) == false) {
-//     array_push($resultArr, [$sprints[$ii]['project']]);
-//   } else {
-//     array_splice($resultArr, $ii, 1);
-//   }
-
-
-//   $ii++;
-// }
-
-
-
-// echo '<pre>';
-// print_r(json_encode($resultArr));
-// echo '</pre>';
-
-
-
-          
-              
-            
-            
-            
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
           $count = 0;
           foreach ($sprints as $sprint) {
             $totalCards = count($sprint['cards']); 
@@ -112,18 +83,19 @@
                 }
 
            
-            echo '<div class="sprint" data-sprint="'.$sprint['id'].'">
-              <span class="project"><h3>'.$sprint['name'].'<br/>
-              <span class="project">'.$sprint['project'].'</span>
-              <div class="card-stats">
-              <ul class="stats">
-              <li class="stat-none vh-center">'.$none.'</li>
-              <li class="stat-in-progress vh-center">'.$inProgress.'</li>
-              <li class="stat-completed vh-center">'.$completed.'</li>
-              <li class="stat-accepted vh-center">'.$accepted.'</li>
-              </ul>
-              </div>
-              </div>';
+            echo '
+            <div class="sprint" data-sprint="'.$sprint['id'].'">
+              <h3>'.$sprint['name'].'</h3>
+              <ul class="project-list"><li>'.$sprint['project'].'</ul>
+                <div class="card-stats">
+                  <ul class="stats">
+                  <li class="stat-none vh-center">'.$none.'</li>
+                  <li class="stat-in-progress vh-center">'.$inProgress.'</li>
+                  <li class="stat-completed vh-center">'.$completed.'</li>
+                  <li class="stat-accepted vh-center">'.$accepted.'</li>
+                  </ul>
+                </div>
+            </div>';
               $count++;
           };
         ?>

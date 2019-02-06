@@ -89,6 +89,15 @@ section {
   font-weight: 500;
 }
 
+ul.project-list li{
+  background: rgba(0,0,0,0.13);
+  font-size:11px;
+  display: inline-block;
+  padding:8px;
+  border-radius: 10px;
+   text-transform: capitalize;
+}
+
 .card-stats ul {
   display: flex;
   justify-content:flex-end;
@@ -108,7 +117,6 @@ section {
 .stat-in-progress { background: var(--blue) }
 .stat-completed { background: var(--green); }
 .stat-accepted { background: var(--purple); }
-
 
 
 
