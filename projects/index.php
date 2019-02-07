@@ -84,8 +84,10 @@
 
            
             echo '
+            <a href="sprint.php?id='.$sprint['id'].'">
             <div class="sprint" data-sprint="'.$sprint['id'].'">
               <h3>'.$sprint['name'].'</h3>
+              <h4>Included Project(s): </h4>
               <ul class="project-list"><li>'.$sprint['project'].'</ul>
                 <div class="card-stats">
                   <ul class="stats">
@@ -95,7 +97,7 @@
                   <li class="stat-accepted vh-center">'.$accepted.'</li>
                   </ul>
                 </div>
-            </div>';
+            </div></a>';
               $count++;
           };
         ?>

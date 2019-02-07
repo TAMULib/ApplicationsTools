@@ -1,25 +1,18 @@
-<?php 
-$cleanURL = strtolower($_GET['project']);
-$cleanURL = preg_replace("/[^a-z0-9_\s-]/", "", $cleanURL);
-$cleanURL = preg_replace("/[\s-]+/", " ", $cleanURL);
-$cleanURL = preg_replace("/[\s_]/", "-", $cleanURL);  
-$sprint = $cleanURL;
- 
-?>
+<?php  $sprintID = $_GET['id']; ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sprints Overview</title>
-    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
 
 <header>
     <div class="global-header">
-      <img src="../images/Libraries_white.svg" alt="Texas A&amp;M Libraries" />
+      <img src="images/Libraries_white.svg" alt="Texas A&amp;M Libraries" />
       <div class="date-time">
         <span class="date"><?php echo date('F d, Y'); ?></span>
         <span class="time" id="timer"></span> 
@@ -29,10 +22,34 @@ $sprint = $cleanURL;
     $url = 'https://api.library.tamu.edu/project-management-service/sprints/active'; // path to your JSON file
     $jsonData = file_get_contents($url); // put the contents of the file into a variable
     $results = json_decode($jsonData, true);
-    $sprintInfo = $results['payload']['ArrayList<Sprint>'];
+    $sprints = $results['payload']['ArrayList<Sprint>'];
+
+
+
+
+        $sprintNames = array();
+        for ($i = count($sprints) - 1; $i >= 0; $i--) {
+            $newSprint = $sprints[$i];
+
+            if(in_array($newSprint['name'], $sprintNames) == false) {
+                array_push($sprintNames, $newSprint['name']);
+            } else {
+                for($j = count($sprints) - 1; $j >= 0; $j--){
+                    $existingSprint = &$sprints[$j];
+                    if($newSprint['name'] == $existingSprint['name']) {
+                        $existingSprint['project'] = $existingSprint['project'].' / '.$newSprint['project'].'</li>';
+                        break;
+                    }
+                }
+                array_splice($sprints, $i, 1);
+            }
+        }
+          
+          
+
     $i = 0;
-foreach ($sprintInfo as $sprint) { 
-    if($cleanURL == $id ){
+foreach ($sprints as $sprint) { 
+    if($sprint['id'] == $sprintID ){
         $sprintNumber = $sprint['name'];
 
 echo '<div class="sprint-title">
@@ -49,7 +66,7 @@ echo '<div class="sprint-title">
     </div>
     <div class="cards">';
 
-            $cards = $sprintInfo[$i]['cards'];
+            $cards = $sprints[$i]['cards'];
             foreach ($cards as $card) { 
                         echo '<div class="card" data-progress="'.$card['status'].'">
                                 <div class="quick-info">
