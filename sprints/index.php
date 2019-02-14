@@ -19,14 +19,18 @@
     </div>
  </header>
  
- <section class="sprint-comtainer">
-            <div class="progress-titles">
-                <div class="title">None</div>
-                <div class="title">In Progress</div>
-                <div class="title">Completed</div>
-                <div class="title">Accepted</div>
-            </div>
-        </section>
+<div class="sprint-title">
+<h1>&nbsp;</h1>
+</div>
+
+    <div class="progress-titles">
+      <div class="title">None</div>
+      <div class="title">In Progress</div>
+      <div class="title">Completed</div>
+      <div class="title">Accepted</div>
+    </div>
+
+    
 <?php
     $url = 'https://api.library.tamu.edu/project-management-service/sprints/active'; // path to your JSON file
     $jsonData = file_get_contents($url); // put the contents of the file into a variable
@@ -56,15 +60,25 @@
           
           
 
-    $i = 1;
+    $i = 0;
 foreach ($sprints as $sprint) { 
+    
         $sprintNumber = $sprint['name'];
 
-echo '
-    <div class="item sprint-'.$i.'">';
+echo '<div class="item count-'.$i.' hide"><div class="sprint-title">
+      <h1 id="'. $sprintNumber .'">'. $sprint['project'] .' - '. $sprintNumber .'</h1>
+    </div>
 
-        echo '<div class="cards">';
-        $cards = $sprints[$i]['cards'];
+    <section class="sprint-comtainer">
+    <div class="progress-titles">
+      <div class="title">None</div>
+      <div class="title">In Progress</div>
+      <div class="title">Completed</div>
+      <div class="title">Accepted</div>
+    </div>
+    <div class="cards">';
+
+            $cards = $sprints[$i]['cards'];
             foreach ($cards as $card) { 
                         echo '<div class="card" data-progress="'.$card['status'].'">
                                 <div class="quick-info">
@@ -73,7 +87,7 @@ echo '
                                         foreach($card['assignees'] as $image){
                                             echo '<li><img src="https://api.library.tamu.edu/project-management-service/images/'.$image['avatar'].'" alt="'.$image['name'].'" /></li>';
                                         } 
-                                echo '</ul>
+                            echo '</ul>
                                 </div>
                             <div class="description">
                                 <h2>'.$card['name'].'</h2>
@@ -82,18 +96,21 @@ echo '
                             <div class="fadeout"></div>
                         </div>';
             }
-
-    echo '</div></div>';
-
-    $i++;
-}
+        $i++;
+        echo '</div>
+    </section></div>';
+    }
     ?>
-    
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script>
+$('.count-0').removeClass('hide');
+
     var i = 0;
 var length = $('.item').length;
-var variableTime = 3000; //default time
+var variableTime = 10000;
 (function Recur(){
   $('.item').eq(i++).delay(variableTime).fadeOut(1000,function(){
     if(i == length){
