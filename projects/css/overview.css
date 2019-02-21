@@ -30,7 +30,7 @@ p,ol,ul {
 ol,ul { list-style: none; }
 
 body {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/2283/denim.png);
+  background: url(../images/denim.png);
 }
 /* Header */
 .global-header {
@@ -145,6 +145,7 @@ th {
   font-weight: 700;
 }
 
+
 tbody td { 
   padding: 10px; 
   border-bottom: 1px solid var(--black);
@@ -152,6 +153,8 @@ tbody td {
 
 
 tbody tr { background: var(--white); }
+
+
 tbody tr:nth-child(-n+2) { 
   color: var(--black);
   border-collapse:10px; 
@@ -163,4 +166,23 @@ tbody tr:nth-child(-n+2) > td {
   color: var(--black);
   font-size: 1.075em;
   font-weight: 700;
+}
+
+
+.headerSortUp::after {
+    content: '';
+    background: url('../images/up.png') bottom center no-repeat;
+    height: 15px;
+    width: 35px;
+    position: absolute;
+    background-size: 35%;
+}
+
+.headerSortDown::after {
+    content: '';
+    background: url('../images/down.png') bottom center no-repeat;
+    height: 15px;
+    width: 35px;
+    position: absolute;
+    background-size: 35%;
 }
