@@ -27,30 +27,47 @@ include 'app.php';
     <input type="checkbox" id="menu" name="menu" class="menu-checkbox" />
     <div class="menu">
       <label class="menu-toggle" for="menu"> <span class="icon">&#9776;</span></label>
+       
+
       <div id="static" class="container column-content">
-        
-          <div class="card">
+      
+        <div class="card">
             <div class="card-header">
                 <div class="card-title">
                     <h3> </h3>
                 </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <h3>DSpace</h3>
-                </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <h3>DAME</h3>
-                </div>
-            </div>
-          </div>
-      </div>
+
+        <?php
+          $json = file_get_contents('https://api.library.tamu.edu/project-management-service/projects');
+          $openProjects = json_decode($json, true)["payload"]["ArrayList<Project>"];
+
+          
+          $projectNames = array();
+          for ($i = count($openProjects) - 1; $i >= 0; $i--) {
+            $newProject = $openProjects[$i];
+
+            if(in_array($newProject['name'], $projectNames) == false) {
+                array_push($projectNames, $newProject['name']);
+             }  
+          }
+          $i = 0;
+          sort($projectNames);
+
+          foreach($projectNames as &$project) { 
+              echo '
+              <div class="card" data-sort="'.$project.'">
+                <div class="card-header">
+                  <div class="card-title">
+                      <h3>'.$project.'</h3>
+                  </div>
+                  </div>
+              </div>';
+          }
+
+        ?>
+    </div>
     </div>
 
 
@@ -207,5 +224,6 @@ include 'app.php';
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/dragula.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 </html>

@@ -68,6 +68,13 @@ body {
 }
 
 #static {
+    &.column-content {
+      position: fixed;
+      height:100%;
+      overflow: scroll;
+      right:0;
+    }
+
     & .card {
         box-shadow: 0px 0px 54px -15px rgba(0,0,0,0.75);
     }
@@ -76,7 +83,7 @@ body {
 
         h3 {
             font-size: 1em;
-            padding: 0px;
+            padding: 5px 0 0 0;
               &:hover {
                 cursor: move;
 
@@ -136,6 +143,7 @@ body {
   background: #ddd;
   margin-bottom: 20px;
   padding: 5px;
+  
 }
 
 #app .description{ display:none;}
@@ -274,18 +282,18 @@ body {
 @media screen and (min-width: 1272px) and (max-width: 1680px)  {
   .wrapper{ width: 90vw;  margin: 0 50px 0 auto; }
   .column-title { padding: 4px; font-size:1em;}
-  .card-title h3 { font-size: 1em; min-width:100px;}
+  .card-title h3 { font-size: 0.85em; min-width:100px;}
   #trash.show { height: 50px; }
   #trash.show img {  width: 25px; padding: 10px 0px 25px 0px; }
   span.expand-colapse{ font-size: 0.65em; }
-
+  .menu { transform: translate3d(-240px, 0, 0); }
   .menu label.menu-toggle { right: -35px; width: 35px; }
   .menu label.menu-toggle span.icon { padding: 10px; }
-  .menu-checkbox:checked + .menu { width: 175px; z-index:5000; }
+  .menu-checkbox:checked + .menu { width: 240px; z-index:5000; }
 
   #static .card .card-header {padding:0;}
-
-
+  #static .card-title h3 { font-size: 0.85em; padding-top:8px; }
+  #static.column-content { width:240px; }
 
 
   .headers {
