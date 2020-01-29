@@ -64,7 +64,7 @@
 
     $i = 0;
 foreach ($sprints as $sprint) { 
-    if($sprint['id'] == $sprintID ){
+    if($sprint['id'] === $sprintID ){
         $sprintNumber = $sprint['name'];
 
 echo '<div class="sprint-title">
@@ -107,5 +107,5 @@ echo '<div class="sprint-title">
     ?>
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <!-- <script src="js/scripts.js"></script> -->
+    <script src="js/scripts.js"></script>
 </body>

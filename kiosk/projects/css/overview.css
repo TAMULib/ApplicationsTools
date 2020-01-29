@@ -14,10 +14,9 @@
 
 /* Reset */
 html {
-  box-sizing: border-box;
   font-size: 16px;
 }
-*, *:before, *:after { box-sizing: inherit; }
+*, *:before, *:after { box-sizing: border-box; }
 
 body,h1,h2,h3,h4,h5,h6,
 p,ol,ul {
@@ -97,8 +96,7 @@ a{
 }
 
 section { 
-  padding:10px;
-  width:85%;
+  width:85vw;
   margin: 0 auto;
 }
 
@@ -162,31 +160,56 @@ ul.project-list li{
 
 
 /* PROJECTS */
-table { 
-  width:100%; 
-  border-collapse: collapse; 
-  padding:10px;
+
+
+table {
+  width: 100%; 
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
+
+tbody,thead { display: block; }
 
 thead { 
   background: var(--yellow); 
   text-align:left; 
   border-bottom: 1px solid var(--black);
+
 }
 
-th { 
+thead tr th{
   padding: 10px; 
   font-weight: 700;
+  cursor: pointer;
+  width:300px;
 }
 
+th:first-child {
+  width:65%;
+}
+
+tbody {
+  display:block;
+  width: 100%;
+  overflow: auto;
+  height: 750px;
+}
 
 tbody td { 
   padding: 10px; 
   border-bottom: 1px solid var(--black);
+  width:300px;
+}
+
+tbody td.project-title {
+  width:65%;
 }
 
 
-tbody tr { background: var(--white); }
+tbody tr { 
+  background: var(--white); 
+}
 
 
 tbody tr:nth-child(-n+2) { 
