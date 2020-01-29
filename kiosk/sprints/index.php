@@ -118,7 +118,8 @@ echo '<div class="item count-'.$i.' hide"><div class="sprint-title">
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src=".."></script>
     <script>
 $('.count-0').removeClass('hide');
 
@@ -135,5 +136,20 @@ var variableTime = 10000;
     });
   });
 })();
+
+
+setInterval(function () {
+    var currentTime = new Date();
+    var currentHours = currentTime.getHours();
+    var currentMinutes = currentTime.getMinutes();
+    var currentSeconds = currentTime.getSeconds();
+            currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+            currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+    var timeOfDay = (currentHours < 12) ? "AM" : "PM";
+            currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
+            currentHours = (currentHours == 0) ? 12 : currentHours;
+    var currentTimeString = currentHours + ":" + currentMinutes + " " + timeOfDay;
+    document.getElementById("timer").innerHTML = currentTimeString;
+}, 1000);
     </script>
 </body>
