@@ -15,6 +15,7 @@
 /* Reset */
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 *, *:before, *:after { box-sizing: border-box; }
 
@@ -193,7 +194,7 @@ tbody {
   display:block;
   width: 100%;
   overflow: auto;
-  height: 750px;
+  height: 440px;
 }
 
 tbody td { 
