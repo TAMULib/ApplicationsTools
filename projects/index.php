@@ -6,10 +6,10 @@
     $sprints = $results['sprints']['payload']['ArrayList<Sprint>'];
 
     // GET ALL PROJECTS
-    $projects = 'https://api.library.tamu.edu/project-management-service/projects/stats';
+    $projects = 'https://api.library.tamu.edu/project-management-service/products/stats';
     $projectsData = file_get_contents($projects); 
     $results['projects'] = json_decode($projectsData, true);
-    $projectstInfo = $results['projects']['payload']['ArrayList<ProjectStats>'];
+    $projectstInfo = $results['projects']['payload']['ArrayList<ProductStats>'];
 ?>
 
 
@@ -87,17 +87,31 @@
             <a href="sprint.php?id='.$sprint['id'].'">
             <div class="sprint" data-sprint="'.$sprint['id'].'">
               <h3>'.$sprint['name'].'</h3>
-              <h4>Included Project(s): </h4>
-              <ul class="project-list"><li>'.$sprint['project'].'</ul>
+              <h4>'.$sprint['product'].'</h4>
                 <div class="card-stats">
                   <ul class="stats">
-                  <li class="stat-none vh-center">'.$none.'</li>
-                  <li class="stat-in-progress vh-center">'.$inProgress.'</li>
-                  <li class="stat-completed vh-center">'.$completed.'</li>
-                  <li class="stat-accepted vh-center">'.$accepted.'</li>
+                  <li class="stat-none vh-center" title="None">'.$none.'</li>
+                  <li class="stat-in-progress vh-center" title="In Progress">'.$inProgress.'</li>
+                  <li class="stat-completed vh-center" title="Completed">'.$completed.'</li>
+                  <li class="stat-accepted vh-center" title="Accepted">'.$accepted.'</li>
                   </ul>
                 </div>
             </div></a>';
+
+            // <a href="sprint.php?id='.$sprint['id'].'">
+            // <div class="sprint" data-sprint="'.$sprint['id'].'">
+            //   <h3>'.$sprint['name'].'</h3>
+            //   <h4>Included Project(s): </h4>
+            //   <ul class="project-list"><li>'.$sprint['project'].'</ul>
+            //     <div class="card-stats">
+            //       <ul class="stats">
+            //       <li class="stat-none vh-center">'.$none.'</li>
+            //       <li class="stat-in-progress vh-center">'.$inProgress.'</li>
+            //       <li class="stat-completed vh-center">'.$completed.'</li>
+            //       <li class="stat-accepted vh-center">'.$accepted.'</li>
+            //       </ul>
+            //     </div>
+            // </div></a>
               $count++;
           };
         ?>
@@ -121,7 +135,7 @@
 
         
             echo '<tr class="project">
-                    <td class="project-title">'.$project['name'].'</td>'.
+                    <td class="project-title"><a href="./overview/index.php?project='.$project['id'].'">'.$project['name'].'</a></td>'.
                     '<td>'.($project['backlogItemCount'] >= 10 ? $project['backlogItemCount'] : '0'.$project['backlogItemCount']).'</td>
                     <td>'.($project['issueCount'] >= 10 ? $project['issueCount'] : '0'.$project['issueCount']).'</td>
                     <td>'.($project['requestCount'] >= 10 ? $project['requestCount'] : '0'.$project['requestCount']).'</td>

@@ -53,7 +53,7 @@ foreach ($sprints as $sprint) {
         $sprintNumber = $sprint['name'];
 
 echo '<div class="sprint-title">
-      <h1 id="'. $sprintNumber .'">'. $sprint['project'] .' - '. $sprintNumber .'</h1>
+      <h1 id="'. $sprintNumber .'">'. $sprintNumber .'</h1>
     </div>
   </header>
 
