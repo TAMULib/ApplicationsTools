@@ -38,28 +38,6 @@
 
         <?php
           
-          
-          
-          
-          $sprintNames = array();
-          for ($i = count($sprints) - 1; $i >= 0; $i--) {
-            $newSprint = $sprints[$i];
-
-            if(in_array($newSprint['name'], $sprintNames) == false) {
-              array_push($sprintNames, $newSprint['name']);
-            } else {
-              for($j = count($sprints) - 1; $j >= 0; $j--){
-                $existingSprint = &$sprints[$j];
-                if($newSprint['name'] == $existingSprint['name']) {
-                  $existingSprint['project'] = $existingSprint['project'].'</li> <li>'.$newSprint['project'].'</li>';
-                  break;
-                }
-              }
-              array_splice($sprints, $i, 1);
-            }
-          }
-       
-
           $count = 0;
           foreach ($sprints as $sprint) {
             $totalCards = count($sprint['cards']); 
