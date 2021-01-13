@@ -97,7 +97,7 @@
 </section>
 
   <section class="projects">
-    <h2>All Projects</h2>
+    <h2>All Products</h2>
     <table id="myTable">
       <thead>
         <tr>
@@ -113,7 +113,7 @@
 
         
             echo '<tr class="project">
-                    <td class="project-title"><a href="./overview/index.php?project='.$project['id'].'">'.$project['name'].'</a></td>'.
+                    <td class="project-title">'.$project['name'].'</td>'.
                     '<td>'.($project['backlogItemCount'] >= 10 ? $project['backlogItemCount'] : '0'.$project['backlogItemCount']).'</td>
                     <td>'.($project['issueCount'] >= 10 ? $project['issueCount'] : '0'.$project['issueCount']).'</td>
                     <td>'.($project['requestCount'] >= 10 ? $project['requestCount'] : '0'.$project['requestCount']).'</td>
