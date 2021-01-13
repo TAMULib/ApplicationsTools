@@ -1,5 +1,6 @@
 /* Fonts */
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap');
 
 :root {
   --white: #f5f5f5;
@@ -11,26 +12,44 @@
   --purple: #d88fd0;
 }
 
-
 /* Reset */
 html {
   box-sizing: border-box;
   font-size: 16px;
 }
-*, *:before, *:after { box-sizing: inherit; }
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
-body,h1,h2,h3,h4,h5,h6,
-p,ol,ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-ol,ul { list-style: none; }
+ol,
+ul {
+  list-style: none;
+}
 
 body {
   background: url(../images/denim.png);
+}
+
+body.no-bg {
+  background: ghostwhite;
 }
 /* Header */
 .global-header {
@@ -41,148 +60,251 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.global-header img { width: 300px; }
+.global-header img {
+  width: 300px;
+}
 .global-header .date-time {
   padding: 0 30px 0 0;
   font-size: 1.25em;
 }
 
-h2 {  
+h2 {
   color: var(--white);
   font-size: 2.25em;
   font-weight: 700;
   padding: 10px;
 }
 
-
-
 /* SPRINTS */
-a{
+a {
   color: #000;
   text-decoration: none;
 }
 
-section { 
-  padding:10px;
-  width:85%;
+section {
+  padding: 10px;
+  width: 85%;
   margin: 0 auto;
 }
 
 .sprints-container {
   display: grid;
-  grid-gap:10px;
+  grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.sprint { 
-  background: var(--white); 
-  padding:5px;
-}
-
-.sprint > h3, .sprint > h4 {
-  margin-left: 5px;
-  margin-bottom: 10px;
+.sprint {
+  background: var(--white);
+  padding: 5px;
 }
 
 .sprint > h3 {
-  font-size: 1.55em;
+  font-size: 1.25em;
   font-weight: 700;
+  margin-bottom: 5px;
+  margin-left: 10px;
 }
 
 .sprint > h4 {
-  font-size: 1.05em;
+  font-size: 1em;
   font-weight: 500;
+  margin-bottom: 25px;
+  margin-left: 10px;
 }
 
-ul.project-list li{
-  background: rgba(0,0,0,0.13);
-  font-size:11px;
+ul.project-list li {
+  background: rgba(0, 0, 0, 0.13);
+  font-size: 11px;
   display: inline-block;
-  padding:8px;
+  padding: 8px;
   border-radius: 10px;
-   text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .card-stats ul {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
-.card-stats ul li { 
-  min-width:30px;
+.card-stats ul li {
+  min-width: 30px;
   padding: 5px;
   text-align: center;
   color: var(--black);
-  margin:2px;
+  margin: 2px;
 }
 
-
-.stat-none { background: var(--red); }
-.stat-future { background: var(--yellow) }
-.stat-in-progress { background: var(--blue) }
-.stat-completed { background: var(--green); }
-.stat-accepted { background: var(--purple); }
-
-
-
-
+.stat-none {
+  background: var(--red);
+}
+.stat-future {
+  background: var(--yellow);
+}
+.stat-in-progress {
+  background: var(--blue);
+}
+.stat-completed {
+  background: var(--green);
+}
+.stat-accepted {
+  background: var(--purple);
+}
 
 /* PROJECTS */
-table { 
-  width:100%; 
-  border-collapse: collapse; 
-  padding:10px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 10px;
 }
 
-thead { 
-  background: var(--yellow); 
-  text-align:left; 
+thead {
+  background: var(--yellow);
+  text-align: left;
   border-bottom: 1px solid var(--black);
 }
 
-th { 
-  padding: 10px; 
+th {
+  padding: 10px;
   font-weight: 700;
 }
 
-
-tbody td { 
-  padding: 10px; 
+tbody td {
+  padding: 10px;
   border-bottom: 1px solid var(--black);
 }
 
-
-tbody tr { background: var(--white); }
-
-
-tbody tr:nth-child(-n+2) { 
-  color: var(--black);
-  border-collapse:10px; 
-  border-spacing:5em;
+tbody tr {
+  background: var(--white);
 }
 
-tbody tr:nth-child(-n+2) > td { 
+tbody tr:nth-child(-n + 2) {
+  color: var(--black);
+  border-collapse: 10px;
+  border-spacing: 5em;
+}
+
+tbody tr:nth-child(-n + 2) > td {
   background: #cceefc;
   color: var(--black);
   font-size: 1.075em;
   font-weight: 700;
 }
 
-
 .headerSortUp::after {
-    content: '';
-    background: url('../images/up.png') bottom center no-repeat;
-    height: 15px;
-    width: 35px;
-    position: absolute;
-    background-size: 35%;
+  content: '';
+  background: url('../images/up.png') bottom center no-repeat;
+  height: 15px;
+  width: 35px;
+  position: absolute;
+  background-size: 35%;
 }
 
 .headerSortDown::after {
-    content: '';
-    background: url('../images/down.png') bottom center no-repeat;
-    height: 15px;
-    width: 35px;
-    position: absolute;
-    background-size: 35%;
+  content: '';
+  background: url('../images/down.png') bottom center no-repeat;
+  height: 15px;
+  width: 35px;
+  position: absolute;
+  background-size: 35%;
+}
+
+/* OVERVIEW PAGE */
+.wrapper,
+.detail-container {
+  width: 60vw;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.overview-header,
+.detail-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.overview-header nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.content-wrapper {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.graph {
+  position: relative;
+  width: 380px;
+}
+
+/*  SVG  */
+svg {
+  position: absolute;
+  rotate: 315deg;
+  overflow: inherit;
+}
+
+svg path {
+  will-change: auto;
+  stroke-miterlimit: round;
+  transition: stroke-dashoffset 850ms ease-in-out;
+  stroke-width: 15px;
+}
+
+svg text {
+  rotate: 46deg;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+
+svg text.number {
+  font-size: 11px;
+}
+
+svg:nth-child(2) text.number {
+  font-size: 15px;
+}
+
+svg:nth-child(3) text.number {
+  font-size: 23px;
+}
+
+svg text.small {
+  font-size: 8px;
+  text-transform: lowercase;
+  font-weight: 200;
+}
+
+svg:nth-child(2) text.small {
+  font-size: 11px;
+}
+
+svg:nth-child(3) text.small {
+  font-size: 17px;
+}
+
+svg:nth-child(2) {
+  left: 50px;
+  top: 50px;
+}
+
+svg:nth-child(2) path {
+  stroke-width: 19px;
+}
+
+svg:nth-child(3) {
+  left: 100px;
+  top: 100px;
+}
+
+svg:nth-child(3) path {
+  stroke-width: 30px;
 }
