@@ -50,6 +50,14 @@
         <h3>TL Components</h3>
         <h4>List of current components for TAMU Libraries</h4>
     </a>
+
+    <div class="link">
+        <a href="https://hub.library.tamu.edu/Groups/Units/UserServices/DigitalInitiatives/Applications/ApplicationsPrivate/Lists/Main%20Calendar/calendar.aspx" target="_blank">
+        <h3>DI Calendar</h3>
+        <h4>Calendar of upcoming sprints/demos and employee leave</h4>
+    </a>
+
+    
 </div>
 
 </div>
