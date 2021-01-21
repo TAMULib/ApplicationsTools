@@ -25,7 +25,7 @@
 <body>
  <div class="container">
  <div class="global-header">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2283/Libraries_white.svg" alt="Texas A&amp;M Libraries" />
+      <a href="https://labs.library.tamu.edu/tools/"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2283/Libraries_white.svg" alt="Texas A&amp;M Libraries" /></a>
       <div class="date-time">
         <span class="date"><?php echo date('F d, Y'); ?></span>
         <span class="time" id="timer"></span> 

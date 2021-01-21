@@ -11,7 +11,7 @@
 
 <header>
     <div class="global-header">
-      <img src="images/Libraries_white.svg" alt="Texas A&amp;M Libraries" />
+      <a href="https://labs.library.tamu.edu/tools/"><img src="images/Libraries_white.svg" alt="Texas A&amp;M Libraries" /></a>
       <div class="date-time">
         <span class="date"><?php echo date('F d, Y'); ?></span>
         <span class="time" id="timer"></span> 

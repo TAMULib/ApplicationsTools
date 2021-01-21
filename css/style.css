@@ -1,0 +1,64 @@
+/* Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Anton);
+
+:root {
+  --white: #f5f5f5;
+  --black: #1d1c1d;
+  --yellow: #ffc222;
+  --red: #fb6666;
+  --green: #8aad4e;
+  --blue: #00adf1;
+  --purple: #d88fd0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  background: transparent url('http://library.tamu.edu/assets/images/denim.png');
+}
+
+/* Header */
+.global-header {
+  background: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.global-header img {
+  width: 300px;
+}
+.global-header .date-time {
+  padding: 0 30px 0 0;
+  font-size: 1.25em;
+}
+
+.link-container {
+  width: 75vw;
+  margin: 20px auto;
+}
+
+.links {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.link {
+  background: var(--white);
+  margin: 10px;
+}
+
+.link a {
+  color: var(--black);
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+}
