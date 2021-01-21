@@ -37,7 +37,7 @@
         
         
         <div class="link">
-            <a href="https://demos.library.tamu.edu/component-library/">
+            <a href="https://demos.library.tamu.edu/component-library/" target="_blank">
             <h3>Design Library</h3>
             <h4>List of current designs for TAMU Libraries</h4>
         </a>
@@ -46,7 +46,7 @@
     
     
     <div class="link">
-        <a href="https://tamulib.github.io/tamu-library-components/docs/usage/">
+        <a href="https://tamulib.github.io/tamu-library-components/docs/usage/" target="_blank">
         <h3>TL Components</h3>
         <h4>List of current components for TAMU Libraries</h4>
     </a>
