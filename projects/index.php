@@ -6,10 +6,10 @@
     $sprints = $results['sprints']['payload']['ArrayList<Sprint>'];
 
     // GET ALL PROJECTS
-    $projects = 'https://api.library.tamu.edu/project-management-service/projects/stats';
+    $projects = 'https://api.library.tamu.edu/project-management-service/products/stats';
     $projectsData = file_get_contents($projects); 
     $results['projects'] = json_decode($projectsData, true);
-    $projectstInfo = $results['projects']['payload']['ArrayList<ProjectStats>'];
+    $projectstInfo = $results['projects']['payload']['ArrayList<ProductStats>'];
 ?>
 
 
@@ -25,7 +25,7 @@
 <body>
  <div class="container">
  <div class="global-header">
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2283/Libraries_white.svg" alt="Texas A&amp;M Libraries" />
+      <a href="https://labs.library.tamu.edu/tools/"><img src="images/Libraries_white.svg" alt="Texas A&amp;M Libraries" /></a>
       <div class="date-time">
         <span class="date"><?php echo date('F d, Y'); ?></span>
         <span class="time" id="timer"></span> 
@@ -38,28 +38,6 @@
 
         <?php
           
-          
-          
-          
-          $sprintNames = array();
-          for ($i = count($sprints) - 1; $i >= 0; $i--) {
-            $newSprint = $sprints[$i];
-
-            if(in_array($newSprint['name'], $sprintNames) == false) {
-              array_push($sprintNames, $newSprint['name']);
-            } else {
-              for($j = count($sprints) - 1; $j >= 0; $j--){
-                $existingSprint = &$sprints[$j];
-                if($newSprint['name'] == $existingSprint['name']) {
-                  $existingSprint['project'] = $existingSprint['project'].'</li> <li>'.$newSprint['project'].'</li>';
-                  break;
-                }
-              }
-              array_splice($sprints, $i, 1);
-            }
-          }
-       
-
           $count = 0;
           foreach ($sprints as $sprint) {
             $totalCards = count($sprint['cards']); 
@@ -87,17 +65,31 @@
             <a href="sprint.php?id='.$sprint['id'].'">
             <div class="sprint" data-sprint="'.$sprint['id'].'">
               <h3>'.$sprint['name'].'</h3>
-              <h4>Included Project(s): </h4>
-              <ul class="project-list"><li>'.$sprint['project'].'</ul>
+              <h4>'.$sprint['product'].'</h4>
                 <div class="card-stats">
                   <ul class="stats">
-                  <li class="stat-none vh-center">'.$none.'</li>
-                  <li class="stat-in-progress vh-center">'.$inProgress.'</li>
-                  <li class="stat-completed vh-center">'.$completed.'</li>
-                  <li class="stat-accepted vh-center">'.$accepted.'</li>
+                  <li class="stat-none vh-center" title="None">'.$none.'</li>
+                  <li class="stat-in-progress vh-center" title="In Progress">'.$inProgress.'</li>
+                  <li class="stat-completed vh-center" title="Completed">'.$completed.'</li>
+                  <li class="stat-accepted vh-center" title="Accepted">'.$accepted.'</li>
                   </ul>
                 </div>
             </div></a>';
+
+            // <a href="sprint.php?id='.$sprint['id'].'">
+            // <div class="sprint" data-sprint="'.$sprint['id'].'">
+            //   <h3>'.$sprint['name'].'</h3>
+            //   <h4>Included Project(s): </h4>
+            //   <ul class="project-list"><li>'.$sprint['project'].'</ul>
+            //     <div class="card-stats">
+            //       <ul class="stats">
+            //       <li class="stat-none vh-center">'.$none.'</li>
+            //       <li class="stat-in-progress vh-center">'.$inProgress.'</li>
+            //       <li class="stat-completed vh-center">'.$completed.'</li>
+            //       <li class="stat-accepted vh-center">'.$accepted.'</li>
+            //       </ul>
+            //     </div>
+            // </div></a>
               $count++;
           };
         ?>
@@ -105,7 +97,7 @@
 </section>
 
   <section class="projects">
-    <h2>All Projects</h2>
+    <h2>All Products</h2>
     <table id="myTable">
       <thead>
         <tr>
