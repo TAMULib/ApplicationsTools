@@ -13,8 +13,6 @@ include 'app.php';
 
 </head>
 <body>
-
-  
  
 <div class="headers">
 <div class="title sprints"><h3>Sprints</h3></div>
