@@ -33,53 +33,6 @@ body {
   background: #ccc;
 }
 
-/* Header */
-.global-header {
-  background: #1d1c1d;
-  color: #fff;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 100vw;
-  max-height: 69px;
-}
-
-.global-header img { width: 300px; }
-
-.global-header .date-time {
-  padding: 0 30px 0 0;
-  font-size: 1.25em; 
-}
-
-.global-header .date-time span.date {
-  padding-right: 10px; 
-}
-
-.global-header .nav ul{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.global-header .nav-time .nav ul li{
-  padding: 0 20px 0 20px;
-}
-
-.global-header .nav-time .nav {
-  margin-right: 50px;
-}
-
-.global-header .nav-time .nav li img {
-  filter: invert(100%);
-  width:25px;
-}
-
-.global-header .nav-time {
-  display: flex;
-  align-content: space-around;
-}
 
 h2 {  
   color: var(--black);
@@ -161,12 +114,15 @@ ul.project-list li{
 
 
 /* PROJECTS */
-
+section.projects h2 {
+  margin-top: 25px;
+}
 
 table {
   width: 100%; 
   border-collapse: collapse;
   border-spacing: 0;
+  margin-bottom:50px;
 }
 
 
@@ -193,8 +149,8 @@ th:first-child {
 tbody {
   display:block;
   width: 100%;
-  overflow: auto;
-  height: 524px;
+  overflow: scroll;
+  height: 525px;
 }
 
 tbody td { 

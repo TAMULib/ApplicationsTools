@@ -6,10 +6,10 @@
     $sprints = $results['sprints']['payload']['ArrayList<Sprint>'];
 
     // GET ALL PROJECTS
-    $projects = 'https://api.library.tamu.edu/project-management-service/projects/stats';
+    $projects = 'https://api.library.tamu.edu/project-management-service/products/stats';
     $projectsData = file_get_contents($projects); 
     $results['projects'] = json_decode($projectsData, true);
-    $projectstInfo = $results['projects']['payload']['ArrayList<ProjectStats>'];
+    $projectstInfo = $results['projects']['payload']['ArrayList<ProductStats>'];
 ?>
 
 
@@ -83,8 +83,8 @@
             <a href="sprint.php?id='.$sprint['id'].'">
             <div class="sprint" data-sprint="'.$sprint['id'].'">
               <h3>'.$sprint['name'].'</h3>
-              <h4>Included Project(s): </h4>
-              <ul class="project-list"><li>'.$sprint['project'].'</ul>
+              <h4>Included Project(s):</h4>
+              <ul class="project-list"><li>'.$sprint['product'].'</ul>
                 <div class="card-stats">
                   <ul class="stats">
                   <li class="stat-none vh-center">'.$none.'</li>

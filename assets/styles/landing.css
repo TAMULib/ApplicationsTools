@@ -19,11 +19,6 @@ h5, h6, p, ol, ul {
   font-family: "Lato", sans-serif; 
 }
 
-/* 
-https://www.brwarch.com/wp-content/uploads/2019/08/tamu-evans-header-01.jpg
-https://www.brwarch.com/wp-content/uploads/2019/08/tamu-evans-header-02.jpg
-https://www.brwarch.com/wp-content/uploads/2019/08/tamu-evans-header-03.jpg
-*/
 body {
   background: url('https://www.brwarch.com/wp-content/uploads/2019/08/tamu-evans-header-02.jpg') no-repeat center center fixed; 
   background-size: cover;
