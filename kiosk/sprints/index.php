@@ -10,8 +10,6 @@
 
 <body>
 
-
- 
 <div class="sprint-title">
 <h1>&nbsp;</h1>
 </div>

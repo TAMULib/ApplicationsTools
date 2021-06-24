@@ -13,23 +13,24 @@ setInterval(function () {
 }, 1000);
 
 
-
-(function() {
-        var idleDurationSecs = 300;
-        var redirectUrl = '../sprints';  // Redirect idle users to this URL
-        var idleTimeout;
-      
-        var resetIdleTimeout = function() {
-          if(idleTimeout) clearTimeout(idleTimeout);
-      
-          idleTimeout = setTimeout(function(){
-            location.href = redirectUrl
-          }, idleDurationSecs * 1000);
-        };
-      
-        resetIdleTimeout();
-      
-        ['click', 'touchstart', 'mousemove'].forEach(function(evt) {
-          document.addEventListener(evt, resetIdleTimeout, false)
-        });
-      })();
+if (document.cookie.indexOf('norotate') === -1 ) {
+  (function() {
+    var idleDurationSecs = 300;
+    var redirectUrl = '../sprints';  // Redirect idle users to this URL
+    var idleTimeout;
+  
+    var resetIdleTimeout = function() {
+      if(idleTimeout) clearTimeout(idleTimeout);
+  
+      idleTimeout = setTimeout(function(){
+        location.href = redirectUrl
+      }, idleDurationSecs * 1000);
+    };
+  
+    resetIdleTimeout();
+  
+    ['click', 'touchstart', 'mousemove'].forEach(function(evt) {
+      document.addEventListener(evt, resetIdleTimeout, false)
+    });
+  })();
+}

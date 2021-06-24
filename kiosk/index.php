@@ -1,3 +1,15 @@
+<?php
+$rotate = $_GET["rotate"];
+
+if($rotate == 'false') {
+  setcookie('norotate', 'current', time() + (10 * 365 * 24 * 60 * 60), '/');
+} elseif($rotate == 'true') {
+  setcookie('norotate', '',1 ,'/');
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +21,6 @@
     <link rel="stylesheet" href="assets/styles/footer.css" />
 </head>
 <body>
-
 
 
 <footer>

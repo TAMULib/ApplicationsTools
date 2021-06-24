@@ -13,7 +13,6 @@
 
 </head>
 <body>
-    
 
 <?php
     $url = 'https://api.library.tamu.edu/project-management-service/sprints/active'; // path to your JSON file
