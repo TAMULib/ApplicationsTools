@@ -1,0 +1,40 @@
+.global-footer {
+  background: #1d1c1d;
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 500;
+}
+
+.global-footer img {
+  width: 300px;
+}
+
+.global-footer .date-time {
+  padding: 0 30px 0 0;
+  font-size: 1.25em;
+}
+
+.global-footer .date-time span.date {
+  padding-right: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav a {
+  margin: 10px;
+}
+
+.nav a img {
+  height: 40px;
+  width: 100px;
+}
