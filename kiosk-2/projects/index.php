@@ -119,7 +119,7 @@
                     <td class="project-title">'.$project['name'].'</td>'.
                     '<td>'.($project['backlogItemCount'] >= 10 ? $project['backlogItemCount'] : '0'.$project['backlogItemCount']).'</td>
                     <td>'.($project['issueCount'] >= 10 ? $project['issueCount'] : '0'.$project['issueCount']).'</td>
-                    <td>'.($project['requestCount'] >= 10 ? $project['requestCount'] : '0'.$project['requestCount']).'</td>
+                    <td>'.($project['requestCount']+$project['internalCount']>= 10 ? $project['requestCount']+$project['internalCount'] : '0'.$project['requestCount']+$project['internalCount']).'</td>
                   </tr>';
           }
       ?>
